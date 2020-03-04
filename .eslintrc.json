@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/all",
+    "plugin:lit/all",
+    "plugin:jest/all",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "parserOptions": { "project": "./tsconfig.all.json" },
+  "env": { "browser": true },
+  "rules": {
+    "@typescript-eslint/no-inferrable-types": ["error", { "ignoreProperties": true }],
+    "jest/no-hooks": "off",
+    "jest/prefer-expect-assertions": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.spec.*"],
+      "rules": {
+        "@typescript-eslint/no-magic-numbers": "off"
+      }
+    },
+    {
+      "files": ["*.e2e.ts"],
+      "globals": {
+        "page": true,
+        "browser": true,
+        "context": true,
+        "jestPuppeteer": true
+      }
+    }
+  ]
+}
