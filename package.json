@@ -16,7 +16,6 @@
   "license": "MIT",
   "author": "Fernando Pasik <fernando@pasik.com.ar> (https://fernandopasik.com)",
   "sideEffects": false,
-  "type": "module",
   "main": "hello-world.js",
   "module": "hello-world.js",
   "typings": "hello-world.d.ts",
@@ -28,6 +27,7 @@
     "build": "tsc",
     "check-types": "tsc --noEmit -p tsconfig.all.json",
     "lint": "lit-analyzer src --strict && eslint . --ext ts,js",
+    "start": "start-storybook -p 6006",
     "verify": "yarn lint && yarn check-types && yarn build",
     "preversion": "yarn verify"
   },
@@ -39,9 +39,11 @@
     "@babel/preset-typescript": "^7.8.3",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@storybook/web-components": "^5.3.14",
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "@typescript-eslint/parser": "^2.22.0",
     "@webcomponents/webcomponentsjs": "^2.4.2",
+    "babel-loader": "^8.0.6",
     "del-cli": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -56,6 +58,7 @@
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
     "prettier": "^1.19.1",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
