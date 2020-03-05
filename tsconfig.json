@@ -27,7 +27,11 @@
   "include": ["src/**/*"],
   "exclude": [
     "node_modules",
-    "**/__tests__/**/*",
-    "**/?(*.)+(spec|test).(js|ts)"
+    "**/__tests__/**",
+    "**/__mocks__/**",
+    "**/__stories__/**",
+    "**/*.spec.*",
+    "**/*.test.*",
+    "**/*.stories.*"
   ]
 }
