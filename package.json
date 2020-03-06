@@ -29,7 +29,7 @@
     "lint": "lit-analyzer src --strict && eslint . --ext ts,js",
     "start": "start-storybook -p 6006",
     "test": "jest",
-    "verify": "yarn lint && yarn check-types && yarn build",
+    "verify": "yarn lint && yarn check-types && yarn test && yarn build",
     "preversion": "yarn verify"
   },
   "devDependencies": {
