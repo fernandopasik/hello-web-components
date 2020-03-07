@@ -27,10 +27,11 @@
     "build": "tsc && rollup -c",
     "check-types": "tsc --noEmit -p tsconfig.all.json",
     "lint": "lit-analyzer src --strict && eslint . --ext ts,js",
+    "size": "bundlesize",
     "start": "start-storybook -p 6006",
     "test": "jest",
     "test:e2e": "jest --config jest.config-e2e.js",
-    "verify": "yarn lint && yarn check-types && yarn test && yarn test:e2e && yarn build",
+    "verify": "yarn lint && yarn check-types && yarn test && yarn test:e2e && yarn build && yarn size",
     "preversion": "yarn verify"
   },
   "devDependencies": {
@@ -50,6 +51,7 @@
     "@typescript-eslint/parser": "^2.22.0",
     "@webcomponents/webcomponentsjs": "^2.4.2",
     "babel-loader": "^8.0.6",
+    "bundlesize": "^0.18.0",
     "del-cli": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -85,5 +87,11 @@
   },
   "resolutions": {
     "jsdom": "^16.2.0"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "hello-world.min.js",
+      "maxSize": "1 kB"
+    }
+  ]
 }
