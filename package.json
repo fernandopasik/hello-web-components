@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "prebuild": "del lib hello-world.*",
-    "build": "tsc",
+    "build": "tsc && rollup -c",
     "check-types": "tsc --noEmit -p tsconfig.all.json",
     "lint": "lit-analyzer src --strict && eslint . --ext ts,js",
     "start": "start-storybook -p 6006",
@@ -70,6 +70,8 @@
     "lit-html": "^1.1.2",
     "prettier": "^1.19.1",
     "puppeteer": "^2.1.1",
+    "rollup": "^2.0.0",
+    "rollup-plugin-terser": "^5.2.0",
     "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.3",
