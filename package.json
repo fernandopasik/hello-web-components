@@ -34,6 +34,9 @@
     "verify": "yarn lint && yarn check-types && yarn test && yarn test:e2e && yarn build && yarn size",
     "preversion": "yarn verify"
   },
+  "resolutions": {
+    "jsdom": "^16.2.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -84,9 +87,6 @@
   "peerDependencies": {
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2"
-  },
-  "resolutions": {
-    "jsdom": "^16.2.0"
   },
   "bundlesize": [
     {
