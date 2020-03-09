@@ -20,9 +20,7 @@
   "overrides": [
     {
       "files": ["*.spec.*"],
-      "rules": {
-        "@typescript-eslint/no-magic-numbers": "off"
-      }
+      "rules": { "@typescript-eslint/no-magic-numbers": "off" }
     },
     {
       "files": ["*.e2e.ts"],
