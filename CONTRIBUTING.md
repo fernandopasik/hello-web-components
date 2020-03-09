@@ -15,3 +15,8 @@ If no similar issue is found please submit a [new](https://github.com/fernandopa
 6. Please add a clear description of the problem and solution
 7. Include any related issue number
 8. Please ensure the PR passes the automated checks
+
+## Styleguides
+
+- Git commit messages are checked with [commitlint](https://github.com/marionebl/commitlint) and follow the [conventional commits rules](https://github.com/marionebl/commitlint/tree/master/@commitlint/config-conventional#rules).
+- JavaScript styles are checked with [eslint](https://eslint.org/) and follow the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
