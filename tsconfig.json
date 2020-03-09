@@ -26,13 +26,12 @@
   },
   "include": ["src/**/*"],
   "exclude": [
-    "node_modules",
-    "**/__tests__/**",
     "**/__mocks__/**",
     "**/__stories__/**",
-    "**/*.spec.*",
+    "**/__tests__/**",
     "**/*.e2e.*",
-    "**/*.test.*",
-    "**/*.stories.*"
+    "**/*.spec.*",
+    "**/*.stories.*",
+    "node_modules"
   ]
 }
