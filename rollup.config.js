@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/typedef, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
 import { terser } from 'rollup-plugin-terser';
 
 export default {
@@ -8,7 +9,6 @@ export default {
     sourcemap: true,
   },
   external: ['lit-element', 'lit-html'],
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type, @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/typedef
   onwarn(warning, warn) {
     if (warning.code === 'THIS_IS_UNDEFINED') {
       return;

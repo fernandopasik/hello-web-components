@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/typedef, @typescript-eslint/strict-boolean-expressions */
+/* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/typedef, @typescript-eslint/strict-boolean-expressions, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
 module.exports = (api) => ({
   presets: [
     [

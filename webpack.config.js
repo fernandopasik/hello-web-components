@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports */
+/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
