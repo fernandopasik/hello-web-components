@@ -10,26 +10,18 @@
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "env": { "browser": true },
+  "overrides": [
+    { "files": ["*.spec.*"], "rules": { "@typescript-eslint/no-magic-numbers": "off" } },
+    {
+      "files": ["*.e2e.ts"],
+      "globals": { "page": true, "browser": true, "context": true, "jestPuppeteer": true }
+    }
+  ],
   "rules": {
     "@typescript-eslint/no-inferrable-types": ["error", { "ignoreProperties": true }],
     "@typescript-eslint/prefer-readonly-parameter-types": "warn",
     "import/extensions": ["error", "never"],
     "jest/no-hooks": "off",
     "jest/prefer-expect-assertions": "off"
-  },
-  "overrides": [
-    {
-      "files": ["*.spec.*"],
-      "rules": { "@typescript-eslint/no-magic-numbers": "off" }
-    },
-    {
-      "files": ["*.e2e.ts"],
-      "globals": {
-        "page": true,
-        "browser": true,
-        "context": true,
-        "jestPuppeteer": true
-      }
-    }
-  ]
+  }
 }
