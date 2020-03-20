@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "inlineSources": true,
-    "lib": ["es2020", "dom", "dom.iterable"],
+    "lib": ["dom", "dom.iterable", "es2020"],
     "module": "ESNext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
@@ -24,7 +24,6 @@
     "strictPropertyInitialization": true,
     "target": "es2017"
   },
-  "include": ["src/**/*"],
   "exclude": [
     "**/__mocks__/**",
     "**/__stories__/**",
@@ -33,5 +32,6 @@
     "**/*.spec.*",
     "**/*.stories.*",
     "node_modules"
-  ]
+  ],
+  "include": ["src/**/*"]
 }

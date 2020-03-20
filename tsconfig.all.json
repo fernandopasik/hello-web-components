@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "allowJs": true, "noEmit": true },
-  "include": ["src/**/*", "./*.js"],
-  "exclude": ["node_modules", "/hello-world.*"]
+  "exclude": ["node_modules", "/hello-world.*"],
+  "include": ["./*.js", "src/**/*"]
 }
