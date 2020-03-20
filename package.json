@@ -72,8 +72,8 @@
     "jsdom": "^16.2.1",
     "lint-staged": "^10.0.8",
     "lit-analyzer": "^1.1.10",
-    "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2",
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1",
     "prettier": "^1.19.1",
     "puppeteer": "^2.1.1",
     "rollup": "^2.1.0",
@@ -86,8 +86,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "peerDependencies": {
-    "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2"
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1"
   },
   "bundlesize": [
     {
