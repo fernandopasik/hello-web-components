@@ -2,8 +2,7 @@
 
 ## Reporting Bugs or suggesting features
 
-Ensure the bug or feature has not been reported before searching by [searching](https://github.com/fernandopasik/hello-web-components/issues) first.
-If no similar issue is found please submit a [new](https://github.com/fernandopasik/hello-web-components/issues/new/choose) one.
+Ensure the bug or feature has not been reported before searching by [searching](https://github.com/fernandopasik/hello-web-components/issues) first. If no similar issue is found please submit a [new](https://github.com/fernandopasik/hello-web-components/issues/new/choose) one.
 
 ## Submitting changes
 
