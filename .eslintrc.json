@@ -19,6 +19,7 @@
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
     "@typescript-eslint/no-inferrable-types": ["error", { "ignoreProperties": true }],
+    "@typescript-eslint/no-unsafe-call": "warn",
     "@typescript-eslint/prefer-readonly-parameter-types": "warn",
     "import/extensions": ["error", "never"],
     "jest/no-hooks": "off",
