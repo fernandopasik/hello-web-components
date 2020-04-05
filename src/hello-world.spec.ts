@@ -5,12 +5,7 @@ import './hello-world';
 describe('hello world', () => {
   it('starts with hello', async () => {
     const wrapper = document.createElement('div');
-    render(
-      html`
-        <hello-world></hello-world>
-      `,
-      wrapper,
-    );
+    render(html`<hello-world></hello-world>`, wrapper);
     document.body.appendChild(wrapper);
 
     const hello: LitElement | null = document.body.querySelector('hello-world');
@@ -22,12 +17,7 @@ describe('hello world', () => {
 
   it('can say hi to another', async () => {
     const wrapper = document.createElement('div');
-    render(
-      html`
-        <hello-world who="Fernando"></hello-world>
-      `,
-      wrapper,
-    );
+    render(html`<hello-world who="Fernando"></hello-world>`, wrapper);
     document.body.appendChild(wrapper);
 
     const hello: LitElement | null = document.body.querySelector('hello-world');
