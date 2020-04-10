@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/typedef, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
 import { terser } from 'rollup-plugin-terser';
+import minifyHTML from 'rollup-plugin-minify-html-literals';
 
 export default {
   input: 'hello-world.js',
@@ -16,6 +17,7 @@ export default {
     warn(warning);
   },
   plugins: [
+    minifyHTML(),
     terser({
       warnings: true,
       mangle: {
