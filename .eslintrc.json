@@ -10,11 +10,11 @@
   ],
   "env": { "browser": true },
   "overrides": [
-    { "files": ["*.spec.*"], "rules": { "@typescript-eslint/no-magic-numbers": "off" } },
     {
       "files": ["*.e2e.ts"],
       "globals": { "page": true, "browser": true, "context": true, "jestPuppeteer": true }
-    }
+    },
+    { "files": ["*.spec.*"], "rules": { "@typescript-eslint/no-magic-numbers": "off" } }
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
