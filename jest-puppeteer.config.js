@@ -3,8 +3,8 @@ module.exports = {
   //   devtools: true,
   // },
   server: {
-    command: 'yarn webpack-dev-server',
+    command: 'yarn build',
     launchTimeout: 20000,
-    port: 8080,
+    port: 10001,
   },
 };

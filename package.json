@@ -23,7 +23,7 @@
     "/hello-world.*"
   ],
   "scripts": {
-    "prebuild": "del lib hello-world.*",
+    "prebuild": "del lib hello-world.* index.html",
     "build": "tsc && rollup -c",
     "check-types": "tsc --noEmit -p tsconfig.all.json",
     "lint": "lit-analyzer src --strict && eslint . --ext ts,js",
@@ -45,6 +45,8 @@
     "@babel/preset-typescript": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@rollup/plugin-html": "^0.1.1",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "@storybook/web-components": "^5.3.18",
     "@types/expect-puppeteer": "^4.4.1",
     "@types/jest": "^25.2.1",
@@ -77,13 +79,11 @@
     "puppeteer": "^2.1.1",
     "rollup": "^2.3.3",
     "rollup-plugin-minify-html-literals": "^1.2.3",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-terser": "^5.3.0",
     "ts-jest": "25.2.1",
     "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "lit-element": "^2.3.1",
