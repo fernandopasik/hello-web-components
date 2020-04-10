@@ -30,7 +30,7 @@
     "size": "bundlesize",
     "start": "start-storybook -p 6006",
     "test": "jest",
-    "test:e2e": "jest --config jest.config-e2e.js",
+    "test:e2e": "TESTS=E2E jest",
     "verify": "yarn lint && yarn check-types && yarn test && yarn test:e2e && yarn build && yarn size",
     "preversion": "yarn verify"
   },
