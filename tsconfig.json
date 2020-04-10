@@ -30,8 +30,7 @@
     "**/__tests__/**",
     "**/*.e2e.*",
     "**/*.spec.*",
-    "**/*.stories.*",
-    "node_modules"
+    "**/*.stories.*"
   ],
   "include": ["src/**/*"]
 }
