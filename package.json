@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "description": "A simple hello world web component written in typescript, using lit-html and lit-element",
   "keywords": [
+    "hello-world",
     "lit-element",
     "lit-html",
-    "hello-world"
+    "web-components"
   ],
   "homepage": "https://github.com/fernandopasik/hello-web-components",
   "bugs": "https://github.com/fernandopasik/hello-web-components/issues",
