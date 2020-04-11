@@ -75,7 +75,7 @@ jobs:
 
   test-e2e:
     docker:
-      - image: circleci/node:lts
+      - image: circleci/node:lts-browsers
     steps:
       - checkout
       - *restore_yarn_cache
