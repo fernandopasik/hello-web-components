@@ -12,7 +12,8 @@
   "overrides": [
     {
       "files": ["*.e2e.ts"],
-      "globals": { "page": true, "browser": true, "context": true, "jestPuppeteer": true }
+      "globals": { "page": true, "browser": true, "context": true, "jestPuppeteer": true },
+      "rules": { "@typescript-eslint/prefer-readonly-parameter-types": "off" }
     },
     { "files": ["*.spec.*"], "rules": { "@typescript-eslint/no-magic-numbers": "off" } }
   ],
@@ -20,7 +21,6 @@
   "rules": {
     "@typescript-eslint/no-inferrable-types": ["error", { "ignoreProperties": true }],
     "@typescript-eslint/no-magic-numbers": ["error", { "ignore": [0] }],
-    "@typescript-eslint/prefer-readonly-parameter-types": "warn",
     "import/extensions": ["error", "never"],
     "jest/no-hooks": "off",
     "jest/prefer-expect-assertions": "off"
