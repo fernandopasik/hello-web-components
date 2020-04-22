@@ -8,7 +8,7 @@ describe('hello world', () => {
     await render('<hello-world></hello-world>');
     const element = await page.$('hello-world');
 
-    const text = await page.evaluate((el: Element) => el?.shadowRoot?.textContent, element);
+    const text = await page.evaluate((el: HTMLElement) => el?.shadowRoot?.textContent, element);
 
     expect(text).toStrictEqual(expect.stringContaining('Hello world!'));
   });
