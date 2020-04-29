@@ -11580,7 +11580,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-"typescript@^2.9.2 || ^3.0.0", typescript@^3.6.4, typescript@^3.8.3:
+"typescript@^2.9.2 || ^3.0.0", typescript@^3.5.3, typescript@^3.6.4, typescript@^3.8.3:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
   integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
@@ -11944,6 +11944,16 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
+web-component-analyzer@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/web-component-analyzer/-/web-component-analyzer-1.0.3.tgz#da73dff15d6a8f4864311664476f0f436274e97d"
+  integrity sha512-QA6GVVJrKRPHLVqPv4evY0H+du1yY+E1q8c82bdY5e10+pWsRfeYA+Hsh2r8yl1EGQVC55SeV3tGvJ6+CxaH/Q==
+  dependencies:
+    fast-glob "^3.1.0"
+    ts-simple-type "~0.3.6"
+    typescript "^3.5.3"
+    yargs "^15.0.2"
+
 web-component-analyzer@~0.1.17:
   version "0.1.21"
   resolved "https://registry.yarnpkg.com/web-component-analyzer/-/web-component-analyzer-0.1.21.tgz#987fc47802c966004e3f51c8589bd70fd9db1d27"
@@ -12230,7 +12240,7 @@ yargs-parser@^10.0.0:
   dependencies:
     camelcase "^4.1.0"
 
-yargs@^15.3.1:
+yargs@^15.0.2, yargs@^15.3.1:
   version "15.3.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-15.3.1.tgz#9505b472763963e54afe60148ad27a330818e98b"
   integrity sha512-92O1HWEjw27sBfgmXiixJWT5hRBp2eobqXicLtPBIDBhYB+1HpwZlXmbW2luivBJHBzki+7VyCLRtAkScbTBQA==

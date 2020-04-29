@@ -25,6 +25,7 @@
     "/hello-world.*"
   ],
   "scripts": {
+    "analyze": "wca analyze src --format json --outFile custom-elements.json",
     "prebuild": "del lib hello-world.* index.html",
     "build": "tsc && rollup -c",
     "check-types": "tsc --noEmit -p tsconfig.all.json",
@@ -81,7 +82,8 @@
     "rollup-plugin-terser": "^5.3.0",
     "ts-jest": "^25.4.0",
     "ts-loader": "^7.0.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "web-component-analyzer": "^1.0.3"
   },
   "peerDependencies": {
     "lit-element": "^2.3.1",
