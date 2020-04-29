@@ -3,6 +3,7 @@ import './hello-world';
 
 export default {
   title: 'Hello World',
+  component: 'hello-world',
 };
 
 export const withDefaultValues = (): TemplateResult => html`<hello-world></hello-world>`;
