@@ -15,7 +15,11 @@
       "globals": { "page": true, "browser": true, "context": true, "jestPuppeteer": true },
       "rules": { "@typescript-eslint/prefer-readonly-parameter-types": "off" }
     },
-    { "files": ["*.spec.*"], "rules": { "@typescript-eslint/no-magic-numbers": "off" } }
+    { "files": ["*.spec.*"], "rules": { "@typescript-eslint/no-magic-numbers": "off" } },
+    {
+      "files": ["*.stories.*"],
+      "rules": { "import/no-extraneous-dependencies": ["error", { "devDependencies": true }] }
+    }
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
