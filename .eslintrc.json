@@ -12,6 +12,7 @@
   "overrides": [
     {
       "files": ["*.e2e.ts"],
+      "env": { "jest": true },
       "globals": { "browser": true, "context": true, "jestPuppeteer": true, "page": true },
       "rules": { "@typescript-eslint/prefer-readonly-parameter-types": "off" }
     },
