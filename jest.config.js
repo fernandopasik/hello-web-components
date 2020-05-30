@@ -2,7 +2,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.ts'],
   globals: { 'ts-jest': { tsConfig: 'tsconfig.all.json' } },
   transform: { '^.+\\.[j|t]s$': 'ts-jest' },
-  transformIgnorePatterns: ['/node_modules/(?!(lit-html|lit-element|webcomponents)/).*/'],
+  transformIgnorePatterns: ['/node_modules/(?!(lit-html|lit-element|webcomponents|@open-wc)/).*/'],
   ...(process.env.TESTS === 'E2E'
     ? {
         preset: 'jest-puppeteer',
