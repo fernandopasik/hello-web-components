@@ -4,14 +4,16 @@ import './hello-world';
 
 describe('hello world', () => {
   it('starts with hello', async () => {
-    const hello = await fixture(html`<hello-world></hello-world>`);
+    const SUT = await fixture(html`<hello-world></hello-world>`);
+    const hello = SUT.shadowRoot?.querySelector('.hello-world');
 
-    expect(hello.shadowRoot?.textContent).toStrictEqual(expect.stringContaining('Hello world!'));
+    expect(hello?.textContent).toStrictEqual('Hello world!');
   });
 
   it('can say hi to another', async () => {
-    const hello = await fixture(html`<hello-world who="Fernando"></hello-world>`);
+    const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
+    const hello = SUT.shadowRoot?.querySelector('.hello-world');
 
-    expect(hello.shadowRoot?.textContent).toStrictEqual(expect.stringContaining('Fernando!'));
+    expect(hello?.textContent).toStrictEqual('Hello Fernando!');
   });
 });
