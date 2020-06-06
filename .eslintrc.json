@@ -11,22 +11,16 @@
   "env": { "browser": true },
   "overrides": [
     {
-      "files": ["*.e2e.ts"],
+      "files": ["*.e2e.*", "*.spec.*", "*.stories.*"],
+      "rules": { "import/no-extraneous-dependencies": ["error", { "devDependencies": true }] }
+    },
+    {
+      "files": ["*.e2e.*"],
       "env": { "jest": true },
       "globals": { "browser": true, "context": true, "jestPuppeteer": true, "page": true },
       "rules": { "@typescript-eslint/prefer-readonly-parameter-types": "off" }
     },
-    {
-      "files": ["*.spec.*"],
-      "rules": {
-        "@typescript-eslint/no-magic-numbers": "off",
-        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
-      }
-    },
-    {
-      "files": ["*.stories.*"],
-      "rules": { "import/no-extraneous-dependencies": ["error", { "devDependencies": true }] }
-    }
+    { "files": ["*.spec.*"], "rules": { "@typescript-eslint/no-magic-numbers": "off" } }
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
