@@ -72,6 +72,7 @@
     "lit-element": "^2.3.1",
     "lit-html": "^1.2.1",
     "prettier": "^2.0.5",
+    "prettier-plugin-packagejson": "^2.2.5",
     "puppeteer": "^3.3.0",
     "rollup": "^2.13.1",
     "rollup-plugin-minify-html-literals": "^1.2.3",
