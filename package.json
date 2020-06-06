@@ -79,6 +79,7 @@
     "rollup-plugin-terser": "^6.1.0",
     "ts-jest": "^26.1.0",
     "ts-loader": "^7.0.5",
+    "type-fest": "^0.15.0",
     "typescript": "^3.9.5",
     "web-component-analyzer": "^1.0.3"
   },
