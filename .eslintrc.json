@@ -17,10 +17,8 @@
     {
       "files": ["*.e2e.*"],
       "env": { "jest": true },
-      "globals": { "browser": true, "context": true, "jestPuppeteer": true, "page": true },
-      "rules": { "@typescript-eslint/prefer-readonly-parameter-types": "off" }
-    },
-    { "files": ["*.spec.*"], "rules": { "@typescript-eslint/no-magic-numbers": "off" } }
+      "globals": { "browser": true, "context": true, "jestPuppeteer": true, "page": true }
+    }
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
