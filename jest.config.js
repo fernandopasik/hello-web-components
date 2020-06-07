@@ -6,7 +6,6 @@ export default {
   ...(process.env.npm_lifecycle_event === 'test:e2e'
     ? {
         preset: 'jest-puppeteer',
-        testEnvironment: 'jest-environment-puppeteer',
         testMatch: ['**/?(*.)+(e2e).[jt]s?(x)'],
       }
     : {}),
