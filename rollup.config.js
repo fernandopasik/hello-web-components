@@ -5,6 +5,8 @@ import minifyHTML from 'rollup-plugin-minify-html-literals';
 import serve from 'rollup-plugin-serve';
 import { terser } from 'rollup-plugin-terser';
 
+const isServe = process.env.npm_lifecycle_event === 'serve';
+
 export default {
   input: 'hello-world.js',
   output: {
@@ -12,24 +14,23 @@ export default {
     format: 'esm',
     sourcemap: true,
   },
-  external: process.env.TESTS === 'E2E' ? [] : ['lit-element', 'lit-html'],
+  external: isServe ? [] : ['lit-element', 'lit-html'],
   onwarn(warning, warn) {
     if (warning.code === 'THIS_IS_UNDEFINED') {
       return;
     }
     warn(warning);
   },
-  plugins:
-    process.env.TESTS === 'E2E'
-      ? [resolve(), html(), serve()]
-      : [
-          minifyHTML(),
-          terser({
-            warnings: true,
-            mangle: {
-              module: true,
-              properties: true,
-            },
-          }),
-        ],
+  plugins: isServe
+    ? [resolve(), html(), serve()]
+    : [
+        minifyHTML(),
+        terser({
+          warnings: true,
+          mangle: {
+            module: true,
+            properties: true,
+          },
+        }),
+      ],
 };
