@@ -5,7 +5,7 @@ import minifyHTML from 'rollup-plugin-minify-html-literals';
 import serve from 'rollup-plugin-serve';
 import { terser } from 'rollup-plugin-terser';
 
-const isServe = process.env.npm_lifecycle_event === 'serve';
+const isServe = process.env.SERVE === true;
 
 export default {
   input: 'hello-world.js',
