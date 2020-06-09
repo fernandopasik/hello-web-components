@@ -1,10 +1,10 @@
 import {
-  LitElement,
-  html,
   css,
-  property,
-  customElement,
   CSSResult,
+  customElement,
+  html,
+  LitElement,
+  property,
   TemplateResult,
 } from 'lit-element';
 

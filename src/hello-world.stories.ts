@@ -1,5 +1,5 @@
+import { text, withKnobs } from '@storybook/addon-knobs';
 import { html, TemplateResult } from 'lit-element';
-import { withKnobs, text } from '@storybook/addon-knobs';
 import './hello-world';
 
 export default {
