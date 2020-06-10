@@ -1,5 +1,6 @@
 export default {
-  collectCoverageFrom: ['src/**/*.ts'],
+  collectCoverageFrom: ['src/**/*.{j,t}s'],
+  coveragePathIgnorePatterns: ['(e2e|stories)\\.[jt]sx?$', '/__stories__/', '/node_modules/'],
   globals: { 'ts-jest': { tsConfig: 'tsconfig.all.json' } },
   transform: { '^.+\\.[j|t]s$': 'ts-jest' },
   transformIgnorePatterns: ['/node_modules/(?!(lit-html|lit-element|webcomponents|@open-wc)/).*/'],
