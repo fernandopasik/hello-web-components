@@ -11,7 +11,7 @@
   "env": { "browser": true },
   "overrides": [
     {
-      "files": ["*.e2e.*", "*.spec.*", "*.stories.*"],
+      "files": [".storybook/**", "*.e2e.*", "*.spec.*", "*.stories.*"],
       "rules": { "import/no-extraneous-dependencies": ["error", { "devDependencies": true }] }
     },
     {
