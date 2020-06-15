@@ -41,8 +41,8 @@
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
+    "@open-wc/rollup-plugin-html": "^1.1.0",
     "@open-wc/testing-helpers": "^1.8.3",
-    "@rollup/plugin-html": "^0.2.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@storybook/addon-knobs": "6.0.0-beta.28",
     "@storybook/web-components": "6.0.0-beta.28",

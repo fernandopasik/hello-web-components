@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type, @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/typedef, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
-import html from '@rollup/plugin-html';
+import html from '@open-wc/rollup-plugin-html';
 import resolve from '@rollup/plugin-node-resolve';
 import minifyHTML from 'rollup-plugin-minify-html-literals';
 import serve from 'rollup-plugin-serve';
@@ -34,5 +34,6 @@ export default {
             properties: true,
           },
         }),
+        html(),
       ],
 };
