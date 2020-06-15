@@ -10,10 +10,12 @@ const isServe = Boolean(process.env.SERVE);
 export default {
   input: 'hello-world.js',
   output: {
-    file: 'hello-world.min.js',
+    dir: '.',
+    entryFileNames: '[name].min.[ext]',
     format: 'esm',
     sourcemap: true,
   },
+  preserveModules: true,
   external: isServe ? [] : ['lit-element', 'lit-html'],
   onwarn(warning, warn) {
     if (warning.code === 'THIS_IS_UNDEFINED') {
