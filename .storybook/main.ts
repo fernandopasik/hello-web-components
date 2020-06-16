@@ -1,3 +1,3 @@
-module.exports = {
+export default {
   addons: ['@storybook/addon-knobs'],
 };
