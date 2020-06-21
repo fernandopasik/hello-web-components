@@ -1,3 +1,3 @@
 export default {
-  addons: ['@storybook/addon-knobs'],
+  addons: ['@storybook/addon-docs', '@storybook/addon-knobs'],
 };
