@@ -1,4 +1,4 @@
-import { ReadonlyDeep } from 'type-fest';
+import type { ReadonlyDeep } from 'type-fest';
 
 const render = async (html: string): Promise<void> => {
   await page.goto('http://localhost:10001/');
