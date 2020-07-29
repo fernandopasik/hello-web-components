@@ -10,5 +10,7 @@ interface HelloWorldProps {
   who: string;
 }
 
-export const helloWorld = ({ who = 'world' }: Readonly<HelloWorldProps>): TemplateResult =>
+export const helloWorld = ({ who }: Readonly<HelloWorldProps>): TemplateResult =>
   html`<hello-world who=${who}></hello-world>`;
+
+helloWorld.args = { who: 'world' };
