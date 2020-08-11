@@ -1,0 +1,4 @@
+remote_theme: fernandopasik/jekyll-theme-material-docs
+
+plugins:
+  - jekyll-remote-theme
