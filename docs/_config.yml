@@ -1,3 +1,8 @@
+title: Hello Web Components
+description: >
+  A simple starter hello world web component written in typescript, using lit-html and lit-element
+
+
 remote_theme: fernandopasik/jekyll-theme-material-docs
 
 plugins:
