@@ -3,6 +3,14 @@ description: >
   A simple starter hello world web component written in typescript, using lit-html and lit-element
 
 
+main_nav:
+  - title: Get Started
+    url: /getting-started
+
+content_table:
+  - title: Get Started
+    url: /getting-started
+
 remote_theme: fernandopasik/jekyll-theme-material-docs
 
 plugins:
