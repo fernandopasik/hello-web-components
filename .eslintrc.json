@@ -5,6 +5,7 @@
     "plugin:import/typescript",
     "plugin:jest/all",
     "plugin:lit/all",
+    "plugin:wc/best-practice",
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint"
   ],

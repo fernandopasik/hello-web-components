@@ -69,6 +69,7 @@
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-lit": "^1.2.2",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-wc": "^1.2.0",
     "husky": "^4.2.5",
     "jest": "^26.4.2",
     "jest-junit": "^11.1.0",
