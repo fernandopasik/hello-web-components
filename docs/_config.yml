@@ -11,6 +11,8 @@ content_table:
   - title: Get Started
     url: /getting-started
 
+google_analytics: UA-5425682-4
+
 remote_theme: fernandopasik/jekyll-theme-material-docs
 
 plugins:
