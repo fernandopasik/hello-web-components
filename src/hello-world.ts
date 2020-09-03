@@ -1,12 +1,5 @@
-import {
-  css,
-  CSSResult,
-  customElement,
-  html,
-  LitElement,
-  property,
-  TemplateResult,
-} from 'lit-element';
+import type { CSSResult, TemplateResult } from 'lit-element';
+import { css, customElement, html, LitElement, property } from 'lit-element';
 
 @customElement('hello-world')
 class HelloWorld extends LitElement {
