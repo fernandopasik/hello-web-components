@@ -23,7 +23,6 @@
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
-    "@typescript-eslint/no-inferrable-types": ["error", { "ignoreProperties": true }],
     "@typescript-eslint/no-magic-numbers": ["error", { "ignore": [0] }],
     "@typescript-eslint/unbound-method": "off",
     "import/extensions": ["error", "never"],

@@ -14,7 +14,7 @@ class HelloWorld extends LitElement {
   `;
 
   @property({ type: String })
-  public who: string = 'world';
+  public who = 'world';
 
   public render(): TemplateResult {
     return html`<span class="hello-world">Hello <span class="who">${this.who}</span>!</span>`;
