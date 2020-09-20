@@ -19,15 +19,16 @@
   "author": "Fernando Pasik <fernando@pasik.com.ar> (https://fernandopasik.com)",
   "sideEffects": false,
   "type": "module",
-  "main": "hello-world.js",
-  "module": "hello-world.js",
-  "typings": "hello-world.d.ts",
+  "main": "hello-web-components.js",
+  "module": "hello-web-components.js",
+  "typings": "hello-web-components.d.ts",
   "files": [
-    "/hello-world.*"
+    "/lib",
+    "/hello-web-components.*"
   ],
   "scripts": {
     "analyze": "wca analyze src --format json --outFile custom-elements.json",
-    "prebuild": "del lib hello-world.* index.html",
+    "prebuild": "del lib hello-web-components.* index.html",
     "build": "tsc && rollup -c",
     "check-types": "tsc --noEmit -p tsconfig.all.json",
     "docs": "jekyll serve -s docs",
@@ -99,7 +100,7 @@
   },
   "bundlesize": [
     {
-      "path": "hello-world.min.js",
+      "path": "hello-web-components.min.js",
       "maxSize": "1 kB"
     }
   ]

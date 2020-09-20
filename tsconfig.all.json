@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "allowJs": true, "noEmit": true, "outDir": "$$ts-jest" },
-  "exclude": ["/hello-world.*"],
+  "exclude": ["/lib", "/hello-web-components.*"],
   "include": [".**/**/*", "**/*"]
 }

@@ -19,7 +19,8 @@ yarn-error.log
 coverage
 
 # build and temp folders
-/hello-world.*
+/lib
+/hello-web-components.*
 /index.html
 _site
 .jekyll-cache

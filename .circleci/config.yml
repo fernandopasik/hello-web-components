@@ -103,7 +103,7 @@ jobs:
           root: .
           paths:
             - lib
-            - hello-world.*
+            - hello-web-components.*
 
   check-size:
     docker:

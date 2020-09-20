@@ -3,7 +3,7 @@
   "tags": [
     {
       "name": "hello-world",
-      "path": "./src/hello-world.ts",
+      "path": "./src/lib/hello-world.ts",
       "attributes": [
         {
           "name": "who",

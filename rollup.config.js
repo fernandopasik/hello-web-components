@@ -8,14 +8,14 @@ import { terser } from 'rollup-plugin-terser';
 const isServe = Boolean(process.env.SERVE);
 
 export default {
-  input: 'hello-world.js',
+  input: 'hello-web-components.js',
   output: {
     dir: '.',
-    entryFileNames: '[name].min.[ext]',
+    entryFileNames: '[name].min.js',
     format: 'esm',
     sourcemap: true,
   },
-  preserveModules: true,
+  // preserveModules: true,
   external: isServe ? [] : ['lit-element', 'lit-html'],
   onwarn(warning, warn) {
     if (warning.code === 'THIS_IS_UNDEFINED') {
