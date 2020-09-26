@@ -137,28 +137,50 @@ jobs:
 workflows:
   default:
     jobs:
-      - setup
+      - setup:
+          filters:
+            tags:
+              only: /^v.*/
       - lint:
           requires:
             - setup
+          filters:
+            tags:
+              only: /^v.*/
       - check-types:
           requires:
             - setup
+          filters:
+            tags:
+              only: /^v.*/
       - test:
           requires:
             - setup
+          filters:
+            tags:
+              only: /^v.*/
       - test-e2e:
           requires:
             - setup
+          filters:
+            tags:
+              only: /^v.*/
       - build:
           requires:
             - setup
+          filters:
+            tags:
+              only: /^v.*/
       - check-size:
           requires:
             - build
+          filters:
+            tags:
+              only: /^v.*/
       - publish:
           requires:
             - build
+            - check-size
           filters:
             tags:
               only: /^v.*/
