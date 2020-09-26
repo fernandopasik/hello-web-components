@@ -1,6 +1,6 @@
 {
   "name": "hello-web-components",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A simple starter hello world web component written in typescript, using lit-html and lit-element",
   "keywords": [
     "hello-world",
