@@ -118,6 +118,22 @@ jobs:
           name: Check filesize
           command: yarn size
 
+  publish:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - *restore_yarn_cache
+      - *yarn_install
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      - run:
+          name: Publish package to npm
+          command: yarn publish
+
 workflows:
   default:
     jobs:
@@ -140,3 +156,11 @@ workflows:
       - check-size:
           requires:
             - build
+      - publish:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
