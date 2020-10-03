@@ -47,7 +47,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@open-wc/rollup-plugin-html": "^1.2.4",
-    "@open-wc/testing-helpers": "1.8.8",
+    "@open-wc/testing-helpers": "^1.8.10",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@storybook/addon-controls": "6.0.22",
     "@storybook/addon-docs": "6.0.22",
