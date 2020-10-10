@@ -9,7 +9,7 @@ class HelloWorld extends LitElement {
     }
 
     .who {
-      color: DodgerBlue;
+      color: var(--hello-world-who-color, DodgerBlue);
     }
   `;
 
