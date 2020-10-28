@@ -103,8 +103,5 @@
       "path": "hello-web-components.min.js",
       "maxSize": "1 kB"
     }
-  ],
-  "dependencies": {
-    "prismjs": "^1.22.0"
-  }
+  ]
 }
