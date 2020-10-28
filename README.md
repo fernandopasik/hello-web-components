@@ -15,6 +15,21 @@ Clone the repository and modify it to your needs
 git clone --depth 1 https://github.com/fernandopasik/hello-web-components.git
 ```
 
+Install the package in your project and import the component
+
+```sh
+yarn add hello-web-components lit-html lit-element
+```
+
+```js
+import { html, render } from 'lit-html';
+import 'hello-web-components';
+
+const test = () => html`<hello-world who="web components"></hello-world>`;
+
+render(test(), document.body);
+```
+
 ## License
 
 MIT (c) 2020 [Fernando Pasik](https://fernandopasik.com)
