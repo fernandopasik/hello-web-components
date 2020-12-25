@@ -14,7 +14,10 @@
   "overrides": [
     {
       "files": [".storybook/**", "*.e2e.*", "*.spec.*", "*.stories.*"],
-      "rules": { "import/no-extraneous-dependencies": ["error", { "devDependencies": true }] }
+      "rules": {
+        "@typescript-eslint/no-magic-numbers": "off",
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+      }
     },
     {
       "files": ["*.e2e.*"],
