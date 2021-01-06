@@ -41,6 +41,9 @@
     "verify": "yarn lint && yarn check-types && yarn test && yarn test:e2e && yarn build && yarn size",
     "preversion": "yarn verify"
   },
+  "resolutions": {
+    "axios": "^0.21.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
