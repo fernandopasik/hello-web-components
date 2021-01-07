@@ -33,12 +33,13 @@
     "check-types": "tsc --noEmit -p tsconfig.all.json",
     "docs": "jekyll serve -s docs",
     "format": "prettier --write ** ./* ./.??*",
-    "lint": "lit-analyzer src --strict && eslint . --ext ts,js",
+    "lint": "eslint . --ext ts,js",
+    "lit-analyze": "lit-analyzer src --strict",
     "size": "bundlesize",
     "start": "start-storybook -p 6006",
     "test": "jest",
     "test:e2e": "concurrently -s first -k 'SERVE=true yarn build' 'wait-on http://localhost:10001 && jest'",
-    "verify": "yarn lint && yarn check-types && yarn test && yarn test:e2e && yarn build && yarn size",
+    "verify": "yarn lint && yarn lit-analyze && yarn check-types && yarn test && yarn test:e2e && yarn build && yarn size",
     "preversion": "yarn verify"
   },
   "resolutions": {
