@@ -43,7 +43,8 @@
     "preversion": "yarn verify"
   },
   "resolutions": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "immer": "^8.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
