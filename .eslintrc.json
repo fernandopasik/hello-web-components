@@ -7,8 +7,7 @@
     "plugin:lit-a11y/recommended",
     "plugin:lit/all",
     "plugin:prettier/recommended",
-    "plugin:wc/best-practice",
-    "prettier/@typescript-eslint"
+    "plugin:wc/best-practice"
   ],
   "env": { "browser": true },
   "overrides": [
