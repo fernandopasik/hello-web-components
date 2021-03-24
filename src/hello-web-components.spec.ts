@@ -1,5 +1,5 @@
-import HelloWebComponents from './hello-web-components';
-import HelloWorld from './lib/hello-world';
+import HelloWebComponents from './hello-web-components.js';
+import HelloWorld from './lib/hello-world.js';
 
 describe('hello web components', () => {
   it('exports the web component', () => {

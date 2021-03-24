@@ -1,7 +1,7 @@
 import { fixture } from '@open-wc/testing-helpers';
 import { axe } from 'jest-axe';
 import { html } from 'lit-html';
-import './hello-world';
+import './hello-world.js';
 
 describe('hello world', () => {
   it('starts with hello', async () => {

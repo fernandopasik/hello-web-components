@@ -12,6 +12,10 @@
   "env": { "browser": true },
   "overrides": [
     {
+      "files": ["*.stories.*"],
+      "rules": { "import/extensions": "off" }
+    },
+    {
       "files": [".storybook/**", "*.e2e.*", "*.spec.*", "*.stories.*"],
       "rules": {
         "@typescript-eslint/no-magic-numbers": "off",
@@ -29,7 +33,8 @@
     "@typescript-eslint/no-magic-numbers": ["error", { "ignore": [0] }],
     "@typescript-eslint/unbound-method": "off",
     "class-methods-use-this": "off",
-    "import/extensions": ["error", "never"],
+    "import/extensions": ["error", "always"],
+    "import/no-unresolved": "off",
     "jest/no-hooks": "off",
     "jest/prefer-expect-assertions": "off",
     "max-lines": ["error", { "max": 100, "skipBlankLines": true, "skipComments": true }],

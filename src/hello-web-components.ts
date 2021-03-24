@@ -1,1 +1,1 @@
-export { default } from './lib/hello-world';
+export { default } from './lib/hello-world.js';
