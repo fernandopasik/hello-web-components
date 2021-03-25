@@ -27,6 +27,7 @@
     "/hello-web-components.*"
   ],
   "scripts": {
+    "clean": "del _site coverage lib hello-web-components.* index.html",
     "analyze": "wca analyze src --format json --outFile custom-elements.json",
     "prebuild": "del lib hello-web-components.* index.html",
     "build": "tsc && rollup -c",
