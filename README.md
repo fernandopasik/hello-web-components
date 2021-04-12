@@ -1,11 +1,13 @@
 # hello-web-components
 
-[![Gzip Bundle Size][badge-size]][url-size] [![Build Status][badge-ci]][url-ci] [![Test Coverage Status][badge-cov]][url-cov] [![Known Vulnerabilities][badge-sec]][url-sec]
+[![npm version][badge-version]][url-version] [![Gzip Bundle Size][badge-size]][url-size] [![Build Status][badge-ci]][url-ci] [![Test Coverage Status][badge-cov]][url-cov] [![Known Vulnerabilities][badge-sec]][url-sec]
 
+[badge-version]: https://img.shields.io/npm/v/hello-web-components.svg?logo=npm
 [badge-ci]: https://circleci.com/gh/fernandopasik/hello-web-components.svg?style=svg
 [badge-cov]: https://codecov.io/gh/fernandopasik/hello-web-components/branch/master/graph/badge.svg
 [badge-sec]: https://snyk.io/test/github/fernandopasik/hello-web-components/badge.svg?targetFile=package.json
 [badge-size]: http://img.badgesize.io/https://unpkg.com/hello-web-components/hello-web-components.min.js?compression=gzip
+[url-version]: https://www.npmjs.com/package/hello-web-components 'npm version'
 [url-ci]: https://circleci.com/gh/fernandopasik/hello-web-components 'Build Status'
 [url-cov]: https://codecov.io/gh/fernandopasik/hello-web-components 'Test Coverage Status'
 [url-sec]: https://snyk.io/test/github/fernandopasik/hello-web-components?targetFile=package.json 'Known Vulnerabilities'
