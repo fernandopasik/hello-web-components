@@ -35,7 +35,7 @@
     "docs": "jekyll serve -s docs",
     "format": "prettier --write ** ./* ./.??*",
     "postinstall": "husky install",
-    "lint": "eslint . --ext ts,js",
+    "lint": "eslint . --ext js,ts",
     "lit-analyze": "lit-analyzer src --strict",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
