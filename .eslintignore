@@ -3,3 +3,4 @@ node_modules
 !/.storybook
 /lib
 /hello-web-components.*
+_site
