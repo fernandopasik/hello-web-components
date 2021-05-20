@@ -8,3 +8,6 @@ LICENSE
 /coverage
 /lib
 /hello-web-components.*
+_layouts/compress.html
+_site
+.jekyll-cache
