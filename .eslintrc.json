@@ -19,7 +19,9 @@
       "files": [".storybook/**", "*.e2e.*", "*.spec.*", "*.stories.*"],
       "rules": {
         "@typescript-eslint/no-magic-numbers": "off",
-        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "max-lines": "off",
+        "max-lines-per-function": "off"
       }
     },
     {
@@ -30,7 +32,7 @@
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
-    "@typescript-eslint/no-magic-numbers": ["error", { "ignore": [0] }],
+    "@typescript-eslint/no-magic-numbers": ["error", { "ignore": [0, 1] }],
     "@typescript-eslint/unbound-method": "off",
     "class-methods-use-this": "off",
     "import/extensions": ["error", "always"],
