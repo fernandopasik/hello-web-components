@@ -1,26 +1,45 @@
-import { fixture } from '@open-wc/testing-helpers';
 import { axe } from 'jest-axe';
-import { html } from 'lit-html';
+import type { LitElement } from 'lit';
+import { html, render } from 'lit';
 import './hello-world.js';
 
 describe('hello world', () => {
   it('starts with hello', async () => {
-    const SUT = await fixture(html`<hello-world></hello-world>`);
-    const hello = SUT.shadowRoot?.querySelector('.hello-world');
+    const wrapper = document.createElement('div');
+    render(html`<hello-world></hello-world>`, wrapper);
+    document.body.appendChild(wrapper);
 
-    expect(hello?.textContent).toStrictEqual('Hello world!');
+    const hello: LitElement | null = document.body.querySelector('hello-world');
+    await hello?.updateComplete;
+
+    expect(hello?.shadowRoot?.textContent).toStrictEqual(expect.stringContaining('Hello world!'));
+
+    document.body.innerHTML = '';
   });
 
   it('can say hi to another', async () => {
-    const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
-    const hello = SUT.shadowRoot?.querySelector('.hello-world');
+    const wrapper = document.createElement('div');
+    render(html`<hello-world who="Fernando"></hello-world>`, wrapper);
+    document.body.appendChild(wrapper);
 
-    expect(hello?.textContent).toStrictEqual('Hello Fernando!');
+    const hello: LitElement | null = document.body.querySelector('hello-world');
+    await hello?.updateComplete;
+
+    expect(hello?.shadowRoot?.textContent).toStrictEqual(
+      expect.stringContaining('Hello Fernando!'),
+    );
+
+    document.body.innerHTML = '';
   });
 
   it('should be accessible', async () => {
-    const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
+    const wrapper = document.createElement('div');
+    render(html`<hello-world who="Fernando"></hello-world>`, wrapper);
+    document.body.appendChild(wrapper);
 
-    expect(await axe(SUT)).toHaveNoViolations();
+    const hello: LitElement | null = document.body.querySelector('hello-world');
+    await hello?.updateComplete;
+
+    expect(await axe(hello as Element)).toHaveNoViolations();
   });
 });

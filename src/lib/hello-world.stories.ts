@@ -1,5 +1,5 @@
-import type { TemplateResult } from 'lit-element';
-import { html } from 'lit-element';
+import type { TemplateResult } from 'lit';
+import { html } from 'lit';
 import './hello-world';
 
 export default {

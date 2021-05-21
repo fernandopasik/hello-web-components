@@ -1,9 +1,10 @@
-import type { CSSResult, TemplateResult } from 'lit-element';
-import { css, customElement, html, LitElement, property } from 'lit-element';
+import type { TemplateResult } from 'lit';
+import { css, html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
 @customElement('hello-world')
 class HelloWorld extends LitElement {
-  public static styles: CSSResult = css`
+  public static styles = css`
     :host {
       font-size: 2em;
     }
