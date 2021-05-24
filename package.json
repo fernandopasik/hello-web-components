@@ -17,7 +17,6 @@
   },
   "license": "MIT",
   "author": "Fernando Pasik <fernando@pasik.com.ar> (https://fernandopasik.com)",
-  "sideEffects": false,
   "type": "module",
   "main": "hello-web-components.js",
   "module": "hello-web-components.js",
