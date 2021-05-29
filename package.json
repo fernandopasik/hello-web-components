@@ -11,10 +11,7 @@
   ],
   "homepage": "https://github.com/fernandopasik/hello-web-components",
   "bugs": "https://github.com/fernandopasik/hello-web-components/issues",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fernandopasik/hello-web-components.git"
-  },
+  "repository": "fernandopasik/hello-web-components",
   "license": "MIT",
   "author": "Fernando Pasik <fernando@pasik.com.ar> (https://fernandopasik.com)",
   "type": "module",
