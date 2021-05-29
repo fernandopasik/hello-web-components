@@ -19,8 +19,8 @@
   "module": "hello-web-components.js",
   "typings": "hello-web-components.d.ts",
   "files": [
-    "/lib",
-    "/hello-web-components.*"
+    "/hello-web-components.*",
+    "/lib"
   ],
   "scripts": {
     "analyze": "wca analyze src --format json --outFile custom-elements.json",
@@ -30,17 +30,17 @@
     "clean": "del _site coverage lib hello-web-components.* index.html",
     "docs": "jekyll serve -s docs",
     "format": "prettier --no-error-on-unmatched-pattern --write ** ./* ./.??*",
-    "postinstall": "husky install",
     "lint": "eslint . --ext js,ts",
     "lit-analyze": "lit-analyzer src --strict",
-    "prepublishOnly": "pinst --disable",
+    "postinstall": "husky install",
     "postpublish": "pinst --enable",
+    "prepublishOnly": "pinst --disable",
+    "preversion": "yarn verify",
     "size": "bundlewatch",
     "start": "start-storybook -p 6006",
     "test": "jest",
     "test:e2e": "concurrently -s first -k 'SERVE=true yarn build' 'wait-on http://localhost:10001 && jest'",
-    "verify": "yarn lint && yarn lit-analyze && yarn check-types && yarn test && yarn test:e2e && yarn build && yarn size",
-    "preversion": "yarn verify"
+    "verify": "yarn lint && yarn lit-analyze && yarn check-types && yarn test && yarn test:e2e && yarn build && yarn size"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
@@ -101,8 +101,8 @@
   "bundlewatch": {
     "files": [
       {
-        "path": "hello-web-components.min.js",
-        "maxSize": "1 kB"
+        "maxSize": "1 kB",
+        "path": "hello-web-components.min.js"
       }
     ]
   }
