@@ -12,10 +12,6 @@
   "env": { "browser": true },
   "overrides": [
     {
-      "files": ["*.stories.*"],
-      "rules": { "import/extensions": "off" }
-    },
-    {
       "files": [".storybook/**", "*.e2e.*", "*.spec.*", "*.stories.*"],
       "rules": {
         "@typescript-eslint/no-magic-numbers": "off",
@@ -28,7 +24,8 @@
       "files": ["*.e2e.*"],
       "env": { "jest": true },
       "globals": { "browser": true, "context": true, "jestPuppeteer": true, "page": true }
-    }
+    },
+    { "files": ["*.stories.*"], "rules": { "import/extensions": "off" } }
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
