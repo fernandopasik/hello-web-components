@@ -5373,7 +5373,7 @@ emoji-regex@^8.0.0:
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
   integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
 
-emoji-regex@^9.0.0:
+emoji-regex@^9.2.0:
   version "9.2.2"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
@@ -5612,22 +5612,22 @@ eslint-plugin-jest@^24.3.6:
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
-eslint-plugin-lit-a11y@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-lit-a11y/-/eslint-plugin-lit-a11y-1.0.1.tgz#0454d2b4df972d5d064d31473388e2a6968c782c"
-  integrity sha512-c+GgGSXb9HMgbzJGp0yl+msHk2rBXcA7KwbobbLonSXdHm6ln7zRwAEj4i7527FOaCKkhxiN6RXfOJcZT1/Bow==
+eslint-plugin-lit-a11y@^1.1.0-next.0:
+  version "1.1.0-next.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-lit-a11y/-/eslint-plugin-lit-a11y-1.1.0-next.0.tgz#a9f1b1dd83e63f0d4737a2dadaa2dbfced197197"
+  integrity sha512-P93/ny0LDg9wmjIRvWBm1pgl6J9ZAuh18AShh5VZ/m+yzdlevf+yBXMFmMyJHX73JwM5TGiVkYsDjYVvlX2spQ==
   dependencies:
     aria-query "^4.2.2"
     axe-core "^4.0.2"
     axobject-query "^2.2.0"
     dom5 "^3.0.1"
-    emoji-regex "^9.0.0"
+    emoji-regex "^9.2.0"
     eslint "^7.6.0"
     eslint-rule-extender "0.0.1"
     intl-list-format "^1.0.3"
     parse5 "^5.1.1"
-    parse5-htmlparser2-tree-adapter "^6.0.0"
-    requireindex "~1.1.0"
+    parse5-htmlparser2-tree-adapter "^6.0.1"
+    requireindex "~1.2.0"
 
 eslint-plugin-lit@^1.4.1:
   version "1.4.1"
@@ -9846,7 +9846,7 @@ parse-passwd@^1.0.0:
   resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
   integrity sha1-bVuTSkVpk7I9N/QKOC1vFmao5cY=
 
-parse5-htmlparser2-tree-adapter@^6.0.0, parse5-htmlparser2-tree-adapter@^6.0.1:
+parse5-htmlparser2-tree-adapter@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/parse5-htmlparser2-tree-adapter/-/parse5-htmlparser2-tree-adapter-6.0.1.tgz#2cdf9ad823321140370d4dbf5d3e92c7c8ddc6e6"
   integrity sha512-qPuWvbLgvDGilKc5BoicRovlT4MtYT6JfJyBOMDsKoiT+GiuP5qyrPCnR9HcPECIJJmZh5jRndyNThnhhb/vlA==
@@ -10973,15 +10973,10 @@ require-main-filename@^2.0.0:
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-2.0.0.tgz#d0b329ecc7cc0f61649f62215be69af54aa8989b"
   integrity sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==
 
-requireindex@^1.2.0:
+requireindex@^1.2.0, requireindex@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.2.0.tgz#3463cdb22ee151902635aa6c9535d4de9c2ef1ef"
   integrity sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==
-
-requireindex@~1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.1.0.tgz#e5404b81557ef75db6e49c5a72004893fe03e162"
-  integrity sha1-5UBLgVV+91225JxacgBIk/4D4WI=
 
 resolve-cwd@^3.0.0:
   version "3.0.0"
@@ -12924,7 +12919,17 @@ watchpack@^1.7.4:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
 
-web-component-analyzer@^1.1.6, web-component-analyzer@~1.1.1:
+web-component-analyzer@^1.2.0-next.0:
+  version "1.2.0-next.0"
+  resolved "https://registry.yarnpkg.com/web-component-analyzer/-/web-component-analyzer-1.2.0-next.0.tgz#acdb3729d2e9d72ee2b11f458f37e30066729673"
+  integrity sha512-T1/2axCXhw5620t2bLcjhuIW+EivvDf2B96M1y1c2BLLwdUVVisJi5O7A3tQqJfeYLjCjqJ64vSfuDa+v2Z0uw==
+  dependencies:
+    fast-glob "^3.2.2"
+    ts-simple-type "~1.0.5"
+    typescript "^3.8.3"
+    yargs "^15.3.1"
+
+web-component-analyzer@~1.1.1:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/web-component-analyzer/-/web-component-analyzer-1.1.6.tgz#d9bd904d904a711c19ba6046a45b60a7ee3ed2e9"
   integrity sha512-1PyBkb/jijDEVE+Pnk3DTmVHD8takipdvAwvZv1V8jIidsSIJ5nhN87Gs+4dpEb1vw48yp8dnbZKkvMYJ+C0VQ==
