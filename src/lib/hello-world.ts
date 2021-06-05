@@ -23,3 +23,9 @@ class HelloWorld extends LitElement {
 }
 
 export default HelloWorld;
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'hello-world': HelloWorld;
+  }
+}
