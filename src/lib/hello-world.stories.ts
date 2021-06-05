@@ -1,6 +1,6 @@
 import type { Meta, Story } from '@storybook/web-components';
-import type { TemplateResult } from 'lit';
 import { html } from 'lit';
+import type { ReadonlyDeep } from 'type-fest';
 import './hello-world';
 import type HelloWorld from './hello-world';
 
@@ -9,11 +9,7 @@ export default {
   component: 'hello-world',
 } as Meta;
 
-interface HelloWorldProps {
-  who: string;
-}
-
-export const helloWorld: Story<HelloWorld> = ({ who }: Readonly<HelloWorldProps>): TemplateResult =>
+export const helloWorld: Story<ReadonlyDeep<HelloWorld>> = ({ who }) =>
   html`<hello-world who=${who}></hello-world>`;
 
 helloWorld.args = { who: 'world' };
