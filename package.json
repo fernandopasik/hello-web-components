@@ -80,7 +80,7 @@
     "lit": "^2.0.0-rc.2",
     "lit-analyzer": "^1.2.1",
     "pinst": "^2.1.6",
-    "prettier": "^2.3.0",
+    "prettier": "^2.3.1",
     "prettier-plugin-organize-imports": "^2.1.0",
     "prettier-plugin-packagejson": "^2.2.11",
     "puppeteer": "^10.0.0",
