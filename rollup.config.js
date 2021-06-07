@@ -15,7 +15,7 @@ export default {
     format: 'esm',
     sourcemap: true,
   },
-  external: isServe ? [] : ['lit-element', 'lit-html'],
+  external: isServe ? [] : [/lit/],
   onwarn(warning, warn) {
     if (warning.code === 'THIS_IS_UNDEFINED') {
       return;
