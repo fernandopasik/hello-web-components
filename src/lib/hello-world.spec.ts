@@ -3,43 +3,41 @@ import type { LitElement } from 'lit';
 import { html, render } from 'lit';
 import './hello-world.js';
 
+const fixture = async (value: unknown): Promise<Element> => {
+  const wrapper = document.createElement('div');
+  wrapper.id = 'wrapper';
+  render(value, wrapper);
+  document.body.appendChild(wrapper);
+  const litElem = document.querySelector('#wrapper')?.firstElementChild as LitElement;
+  await litElem.updateComplete;
+
+  return litElem;
+};
+
+const cleanup = (): void => {
+  document.querySelector('#wrapper')?.remove();
+};
+
 describe('hello world', () => {
+  afterEach(() => {
+    cleanup();
+  });
+
   it('starts with hello', async () => {
-    const wrapper = document.createElement('div');
-    render(html`<hello-world></hello-world>`, wrapper);
-    document.body.appendChild(wrapper);
+    const SUT = await fixture(html`<hello-world></hello-world>`);
 
-    const hello: LitElement | null = document.body.querySelector('hello-world');
-    await hello?.updateComplete;
-
-    expect(hello?.shadowRoot?.textContent).toStrictEqual(expect.stringContaining('Hello world!'));
-
-    document.body.innerHTML = '';
+    expect(SUT.shadowRoot?.textContent).toStrictEqual(expect.stringContaining('Hello world!'));
   });
 
   it('can say hi to another', async () => {
-    const wrapper = document.createElement('div');
-    render(html`<hello-world who="Fernando"></hello-world>`, wrapper);
-    document.body.appendChild(wrapper);
+    const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
 
-    const hello: LitElement | null = document.body.querySelector('hello-world');
-    await hello?.updateComplete;
-
-    expect(hello?.shadowRoot?.textContent).toStrictEqual(
-      expect.stringContaining('Hello Fernando!'),
-    );
-
-    document.body.innerHTML = '';
+    expect(SUT.shadowRoot?.textContent).toStrictEqual(expect.stringContaining('Hello Fernando!'));
   });
 
   it('should be accessible', async () => {
-    const wrapper = document.createElement('div');
-    render(html`<hello-world who="Fernando"></hello-world>`, wrapper);
-    document.body.appendChild(wrapper);
+    const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
 
-    const hello: LitElement | null = document.body.querySelector('hello-world');
-    await hello?.updateComplete;
-
-    expect(await axe(hello as Element)).toHaveNoViolations();
+    expect(await axe(SUT)).toHaveNoViolations();
   });
 });
