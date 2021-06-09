@@ -32,7 +32,7 @@
     "format": "prettier --no-error-on-unmatched-pattern --write ** ./* ./.??*",
     "lint": "eslint . --ext js,ts",
     "lit-analyze": "lit-analyzer src --strict",
-    "_postinstall": "husky install",
+    "postinstall": "husky install",
     "postpublish": "pinst --enable",
     "prepublishOnly": "pinst --disable",
     "preversion": "yarn verify",
