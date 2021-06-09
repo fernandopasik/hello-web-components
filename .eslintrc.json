@@ -25,7 +25,7 @@
       "env": { "jest": true },
       "globals": { "browser": true, "context": true, "jestPuppeteer": true, "page": true }
     },
-    { "files": ["*.stories.*"], "rules": { "import/extensions": "off" } }
+    { "files": ["*.stories.*"], "rules": { "import/extensions": ["error", "never"] } }
   ],
   "parserOptions": { "project": "./tsconfig.all.json" },
   "rules": {
