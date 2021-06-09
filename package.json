@@ -95,7 +95,7 @@
     "web-component-analyzer": "^1.2.0-next.0"
   },
   "peerDependencies": {
-    "lit": "^2.0.0-rc.2"
+    "lit": "2.x.x"
   },
   "bundlewatch": {
     "files": [
