@@ -19,8 +19,8 @@
   "module": "hello-web-components.js",
   "typings": "hello-web-components.d.ts",
   "files": [
-    "/lib",
-    "/hello-web-components.*"
+    "/hello-web-components.*",
+    "/lib"
   ],
   "scripts": {
     "analyze": "wca analyze src --format json --outFile custom-elements.json",
