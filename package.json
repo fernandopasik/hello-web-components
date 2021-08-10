@@ -29,7 +29,7 @@
     "check-types": "tsc --noEmit -p tsconfig.all.json",
     "clean": "del _site coverage lib hello-web-components.* index.html",
     "docs": "jekyll serve -s docs",
-    "format": "prettier --no-error-on-unmatched-pattern --write ** ./* ./.??*",
+    "format": "prettier --write .",
     "lint": "eslint . --ext js,ts",
     "lit-analyze": "lit-analyzer src --strict",
     "postpublish": "pinst --enable",
