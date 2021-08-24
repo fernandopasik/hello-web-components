@@ -1,20 +1,13 @@
 {
   "name": "hello-web-components",
   "version": "1.3.3",
+  "type": "module",
   "description": "A simple starter hello world web component written in typescript, using lit-html and lit-element",
-  "keywords": [
-    "hello-world",
-    "lit-element",
-    "lit-html",
-    "starter",
-    "web-components"
-  ],
+  "repository": "fernandopasik/hello-web-components",
   "homepage": "https://github.com/fernandopasik/hello-web-components",
   "bugs": "https://github.com/fernandopasik/hello-web-components/issues",
-  "repository": "fernandopasik/hello-web-components",
-  "license": "MIT",
   "author": "Fernando Pasik <fernando@pasik.com.ar> (https://fernandopasik.com)",
-  "type": "module",
+  "license": "MIT",
   "main": "hello-web-components.js",
   "module": "hello-web-components.js",
   "typings": "hello-web-components.d.ts",
@@ -22,9 +15,15 @@
     "/hello-web-components.*",
     "/lib"
   ],
+  "keywords": [
+    "hello-world",
+    "lit-element",
+    "lit-html",
+    "starter",
+    "web-components"
+  ],
   "scripts": {
     "analyze": "wca analyze src --format json --outFile custom-elements.json",
-    "prebuild": "del lib hello-web-components.* index.html",
     "build": "tsc && rollup -c",
     "check-types": "tsc --noEmit -p tsconfig.all.json",
     "clean": "del _site coverage lib hello-web-components.* index.html",
@@ -33,6 +32,7 @@
     "lint": "eslint . --ext js,ts",
     "lit-analyze": "lit-analyzer src --strict",
     "postpublish": "pinst --enable",
+    "prebuild": "del lib hello-web-components.* index.html",
     "prepare": "husky install",
     "prepublishOnly": "pinst --disable",
     "preversion": "yarn verify",
@@ -43,10 +43,8 @@
     "test:e2e": "concurrently -s first -k 'SERVE=true yarn build' 'wait-on http://localhost:10001 && jest'",
     "verify": "yarn lint && yarn lit-analyze && yarn check-types && yarn test:coverage && yarn build && yarn size"
   },
-  "resolutions": {
-    "browserslist": "^4.16.6",
-    "glob-parent": "^5.1.2",
-    "trim": "^1.0.1"
+  "peerDependencies": {
+    "lit": "2.x.x"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -100,8 +98,10 @@
     "wait-on": "^6.0.0",
     "web-component-analyzer": "^2.0.0-next.0"
   },
-  "peerDependencies": {
-    "lit": "2.x.x"
+  "resolutions": {
+    "browserslist": "^4.16.6",
+    "glob-parent": "^5.1.2",
+    "trim": "^1.0.1"
   },
   "bundlewatch": {
     "files": [
