@@ -86,6 +86,7 @@
     "prettier": "^2.3.2",
     "prettier-plugin-organize-imports": "^2.3.3",
     "prettier-plugin-pkg": "^0.10.0",
+    "prettier-plugin-sh": "^0.7.1",
     "puppeteer": "^10.2.0",
     "rollup": "^2.56.3",
     "rollup-plugin-minify-html-literals": "^1.2.6",
