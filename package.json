@@ -29,6 +29,7 @@
     "clean": "del _site coverage lib hello-web-components.* index.html",
     "docs": "jekyll serve -s docs",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "eslint . --ext js,ts",
     "lit-analyze": "lit-analyzer src --strict",
     "postpublish": "pinst --enable",
