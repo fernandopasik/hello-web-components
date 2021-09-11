@@ -103,6 +103,7 @@
   "resolutions": {
     "browserslist": "^4.16.6",
     "glob-parent": "^5.1.2",
+    "set-value": "^4.1.0",
     "trim": "^1.0.1"
   },
   "bundlewatch": {
