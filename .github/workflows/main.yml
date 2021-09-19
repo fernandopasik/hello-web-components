@@ -1,0 +1,79 @@
+name: main
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  install:
+    name: Install Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          check-latest: true
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+  pre-build:
+    name: ${{ matrix.name }}
+    strategy:
+      matrix:
+        include:
+          - name: Check Format
+            task: yarn format:check
+          - name: Lint
+            task: yarn lint
+          - name: Check Typescript Types
+            task: yarn check-types
+          - name: Unit Tests
+            task: yarn test:coverage
+          - name: E2E Tests
+            task: yarn test:e2e --ci --reporters=default
+    runs-on: ubuntu-latest
+    needs: [install]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          check-latest: true
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - run: ${{ matrix.task }}
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: [pre-build]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          check-latest: true
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: bundle
+          path: hello-web-components.min.*
+  size:
+    name: Check Size
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          check-latest: true
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - uses: actions/download-artifact@v2
+        with:
+          name: bundle
+      - run: yarn size
