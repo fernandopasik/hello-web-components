@@ -17,6 +17,7 @@ yarn-error.log
 
 # test files
 /coverage
+/reports
 
 # build and temp folders
 /lib
