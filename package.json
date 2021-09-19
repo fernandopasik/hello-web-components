@@ -104,6 +104,7 @@
     "browserslist": "^4.17.1",
     "glob-parent": "^5.1.2",
     "immer": "^9.0.6",
+    "prismjs": "^1.25.0",
     "set-value": "^4.1.0",
     "trim": "^1.0.1"
   },
