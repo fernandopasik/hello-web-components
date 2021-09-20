@@ -14,7 +14,7 @@ jobs:
           artifact: lint-results
           name: Lint Report
           path: '*.xml'
-          reporter: jest-junit
+          reporter: java-junit
   report-unit-test:
     name: Unit Tests Report
     runs-on: ubuntu-latest
