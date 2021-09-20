@@ -56,7 +56,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn test:coverage --ci --reporters=default --reporters=jest-junit
         env:
-          JEST_JUNIT_OUTPUT: 'reports/unit-test-results.xml'
+          JEST_JUNIT_OUTPUT_FILE: 'reports/unit-test-results.xml'
       - run: yarn codecov
         if: always()
       - uses: actions/upload-artifact@v2
