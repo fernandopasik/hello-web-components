@@ -5,6 +5,16 @@ on:
     types:
       - completed
 jobs:
+  report-lint:
+    name: Lint Report
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dorny/test-reporter@v1
+        with:
+          artifact: lint-results
+          name: Lint Report
+          path: '*.xml'
+          reporter: jest-junit
   report-unit-test:
     name: Unit Tests Report
     runs-on: ubuntu-latest
