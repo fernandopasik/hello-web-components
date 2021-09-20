@@ -13,5 +13,5 @@ jobs:
         with:
           artifact: unit-test-results
           name: Unit Tests Report
-          path: reports/unit-test-results.xml
+          path: '*.xml'
           reporter: jest-junit
