@@ -8,7 +8,6 @@ jobs:
   report-unit-test:
     name: Unit Tests Report
     runs-on: ubuntu-latest
-    needs: [unit-test]
     steps:
       - uses: dorny/test-reporter@v1
         with:
