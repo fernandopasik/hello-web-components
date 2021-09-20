@@ -6,7 +6,7 @@ A simple starter **<hello-world \/>** web component written in typescript, using
 
 [![Gzip Bundle Size](https://img.badgesize.io/https://unpkg.com/hello-web-components/hello-web-components.min.js?compression=gzip)](https://unpkg.com/hello-web-components/hello-web-components.min.js 'Gzip Bundle Size')
 [![Build Status](https://github.com/fernandopasik/hello-web-components/actions/workflows/main.yml/badge.svg)](https://github.com/fernandopasik/hello-web-components/actions/workflows/main.yml 'Build Status')
-[![Coverage Status](https://codecov.io/gh/fernandopasik/hello-web-components/branch/master/graph/badge.svg)](https://codecov.io/gh/fernandopasik/hello-web-components 'Coverage Status')
+[![Coverage Status](https://codecov.io/gh/fernandopasik/hello-web-components/branch/main/graph/badge.svg)](https://codecov.io/gh/fernandopasik/hello-web-components 'Coverage Status')
 [![Known Vulnerabilities](https://snyk.io/test/github/fernandopasik/hello-web-components/badge.svg?targetFile=package.json)](https://snyk.io/test/github/fernandopasik/hello-web-components?targetFile=package.json 'Known Vulnerabilities')
 
 [![npm version](https://img.shields.io/npm/v/hello-web-components.svg?logo=npm)](https://www.npmjs.com/package/hello-web-components 'npm version')
