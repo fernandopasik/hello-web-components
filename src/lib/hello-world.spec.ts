@@ -38,6 +38,6 @@ describe('hello world', () => {
   it('should be accessible', async () => {
     const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
 
-    expect(await axe(SUT)).toHaveNoViolations();
+    await expect(axe(SUT)).resolves.toHaveNoViolations();
   });
 });
