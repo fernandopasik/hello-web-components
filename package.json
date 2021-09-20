@@ -41,7 +41,7 @@
     "start": "start-storybook -p 6006",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:e2e": "concurrently -s first -k 'SERVE=true yarn build' 'wait-on http://localhost:10001 && jest'",
+    "test:e2e": "JEST_PUPPETEER_CONFIG=jest-puppeteer.config.cjs jest",
     "verify": "yarn lint && yarn lit-analyze && yarn check-types && yarn test:coverage && yarn build && yarn size"
   },
   "peerDependencies": {
