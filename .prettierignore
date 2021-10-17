@@ -2,6 +2,7 @@
 /LICENSE
 /coverage
 /hello-web-components.*
+/index.html
 /lib
 _layouts/compress.html
 _site
