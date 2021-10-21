@@ -9,5 +9,3 @@ runs:
         cache: yarn
         check-latest: true
         node-version: 16
-    - run: yarn install --frozen-lockfile
-      shell: bash

@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/setup
+      - run: yarn install --frozen-lockfile
   check-format:
     name: Check Format
     runs-on: ubuntu-latest
