@@ -4,32 +4,40 @@ on:
     branches:
       - main
   pull_request:
-    branches:
-      - main
+
 jobs:
   install:
     name: Install Dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/setup
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
   check-format:
     name: Check Format
     runs-on: ubuntu-latest
-    needs: [install]
+    needs: install
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/setup
-      - run: yarn format:check
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Check Format
+        run: yarn format:check
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    needs: [install]
+    needs: install
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/setup
-      - run: yarn lint --format junit -o reports/lint-results.xml
-      - uses: actions/upload-artifact@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Lint
+        run: yarn lint --format junit -o reports/lint-results.xml
+      - name: Upload Report
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: lint-results
@@ -37,24 +45,32 @@ jobs:
   check-types:
     name: Check Typescript Types
     runs-on: ubuntu-latest
-    needs: [install]
+    needs: install
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/setup
-      - run: yarn check-types
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Check Typescript Types
+        run: yarn check-types
   unit-test:
     name: Unit Tests
     runs-on: ubuntu-latest
-    needs: [install]
+    needs: install
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/setup
-      - run: yarn test:coverage --ci --reporters=default --reporters=jest-junit
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Unit Tests
+        run: yarn test:coverage --ci --reporters=default --reporters=jest-junit
         env:
           JEST_JUNIT_OUTPUT_FILE: 'reports/unit-test-results.xml'
-      - run: yarn codecov
+      - name: Upload Report to Codecov
+        uses: codecov/codecov-action@v2
         if: always()
-      - uses: actions/upload-artifact@v2
+      - name: Upload Report
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: unit-test-results
@@ -62,14 +78,18 @@ jobs:
   e2e-test:
     name: E2E Tests
     runs-on: ubuntu-latest
-    needs: [install]
+    needs: install
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/setup
-      - run: yarn test:e2e --ci --reporters=default --reporters=jest-junit
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: E2E Tests
+        run: yarn test:e2e --ci --reporters=default --reporters=jest-junit
         env:
           JEST_JUNIT_OUTPUT_FILE: 'reports/e2e-test-results.xml'
-      - uses: actions/upload-artifact@v2
+      - name: Upload Report
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: e2e-test-results
@@ -77,23 +97,36 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    needs: [check-format, lint, check-types, unit-test, e2e-test]
+    needs:
+      - check-format
+      - lint
+      - check-types
+      - unit-test
+      - e2e-test
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/setup
-      - run: yarn build
-      - uses: actions/upload-artifact@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Build
+        run: yarn build
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2
         with:
           name: bundle
           path: hello-web-components.min.*
   size:
     name: Check Size
     runs-on: ubuntu-latest
-    needs: [build]
+    needs: build
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/actions/setup
-      - uses: actions/download-artifact@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v2
         with:
           name: bundle
-      - run: yarn size
+      - name: Check Size
+        run: yarn size
