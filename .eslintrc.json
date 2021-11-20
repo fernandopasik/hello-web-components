@@ -27,7 +27,7 @@
     },
     { "files": ["*.stories.*"], "rules": { "import/extensions": ["error", "never"] } }
   ],
-  "parserOptions": { "project": "./tsconfig.all.json" },
+  "parserOptions": { "project": "./tsconfig.json" },
   "rules": {
     "@typescript-eslint/no-magic-numbers": ["error", { "ignore": [0, 1] }],
     "@typescript-eslint/unbound-method": "off",
