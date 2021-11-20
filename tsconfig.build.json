@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": { "allowJs": false, "noEmit": false },
+  "compilerOptions": { "allowJs": false, "noEmit": false, "outDir": "." },
   "exclude": [
     "**/__mocks__/**",
     "**/__stories__/**",
