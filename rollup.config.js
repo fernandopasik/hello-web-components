@@ -33,6 +33,5 @@ export default {
             properties: true,
           },
         }),
-        html(),
       ],
 };
