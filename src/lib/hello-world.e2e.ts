@@ -1,5 +1,3 @@
-import type { ReadonlyDeep } from 'type-fest';
-
 const render = async (html: string): Promise<void> => {
   await page.goto('http://localhost:10001/');
   await page.setContent(html);
@@ -10,10 +8,8 @@ describe('hello world', () => {
     await render('<hello-world></hello-world>');
     const element = await page.$('hello-world');
 
-    const text = await page.evaluate(
-      (el: ReadonlyDeep<HTMLElement>) => el.shadowRoot?.textContent,
-      element,
-    );
+    // eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+    const text = await page.evaluate((el: HTMLElement) => el.shadowRoot?.textContent, element);
 
     expect(text).toStrictEqual(expect.stringContaining('Hello world!'));
   });
