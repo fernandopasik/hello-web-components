@@ -103,7 +103,6 @@
   },
   "resolutions": {
     "glob-parent": "^5.1.2",
-    "puppeteer/node-fetch": "2.6.7",
     "set-value": "^4.1.0",
     "strip-ansi": "^6.0.1",
     "trim": "^1.0.1"
