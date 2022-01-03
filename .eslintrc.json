@@ -6,6 +6,8 @@
     "plugin:jest/all",
     "plugin:lit-a11y/recommended",
     "plugin:lit/all",
+    "plugin:storybook/recommended",
+    "plugin:storybook/csf",
     "plugin:wc/best-practice",
     "prettier"
   ],
@@ -36,6 +38,10 @@
     "jest/no-hooks": "off",
     "jest/prefer-expect-assertions": "off",
     "max-lines": ["error", { "max": 130, "skipBlankLines": true, "skipComments": true }],
-    "max-lines-per-function": ["error", { "max": 20, "skipBlankLines": true, "skipComments": true }]
+    "max-lines-per-function": [
+      "error",
+      { "max": 20, "skipBlankLines": true, "skipComments": true }
+    ],
+    "storybook/prefer-pascal-case": "off"
   }
 }
