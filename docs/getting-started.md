@@ -13,7 +13,6 @@ git clone --depth 1 https://github.com/fernandopasik/hello-web-components.git
 To try out the element, install from npm
 
 ```sh
-yarn add hello-web-components
 npm install hello-web-components
 ```
 
