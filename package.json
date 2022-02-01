@@ -36,13 +36,13 @@
     "prebuild": "del lib hello-web-components.* index.html",
     "prepare": "husky install",
     "prepublishOnly": "pinst --disable",
-    "preversion": "yarn verify",
+    "preversion": "npm run verify",
     "size": "bundlewatch",
     "start": "start-storybook -p 6006",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:e2e": "JEST_PUPPETEER_CONFIG=jest-puppeteer.config.cjs jest",
-    "verify": "yarn format:check && yarn lint && yarn lit-analyze && yarn check-types && yarn test:coverage && yarn build && yarn size"
+    "verify": "npm run format:check && npm run lint && npm run lit-analyze && npm run check-types && npm run test:coverage && npm run build && npm run size"
   },
   "peerDependencies": {
     "lit": "2.x.x"
@@ -100,12 +100,6 @@
     "wait-on": "^6.0.1",
     "web-component-analyzer": "^2.0.0-next.3"
   },
-  "resolutions": {
-    "glob-parent": "^5.1.2",
-    "set-value": "^4.1.0",
-    "strip-ansi": "^6.0.1",
-    "trim": "^1.0.1"
-  },
   "bundlewatch": {
     "files": [
       {
@@ -113,5 +107,9 @@
         "path": "hello-web-components.min.js"
       }
     ]
+  },
+  "overrides": {
+    "glob-parent": "6.0.2",
+    "trim": "^1.0.1"
   }
 }
