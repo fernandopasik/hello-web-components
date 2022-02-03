@@ -25,7 +25,7 @@ git clone --depth 1 https://github.com/fernandopasik/hello-web-components.git
 Install the package in your project and import the component
 
 ```sh
-npm i hello-web-components lit-html lit-element
+npm i hello-web-components lit
 ```
 
 ```js
