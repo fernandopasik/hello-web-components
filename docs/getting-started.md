@@ -19,7 +19,7 @@ npm install hello-web-components
 and use it in your app
 
 ```js
-import { html, render } from 'lit-html';
+import { html, render } from 'lit';
 import './hello-world';
 
 render(html`<hello-world></hello-world>`, document.body);

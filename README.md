@@ -29,7 +29,7 @@ npm i hello-web-components lit
 ```
 
 ```js
-import { html, render } from 'lit-html';
+import { html, render } from 'lit';
 import 'hello-web-components';
 
 const test = () => html`<hello-world who="web components"></hello-world>`;
