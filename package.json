@@ -111,6 +111,7 @@
   },
   "overrides": {
     "glob-parent": "6.0.2",
-    "trim": "^1.0.1"
+    "trim": "1.0.1",
+    "webpack": "4.46.0"
   }
 }
