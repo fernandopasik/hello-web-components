@@ -26,6 +26,7 @@ export default HelloWorld;
 
 declare global {
   interface HTMLElementTagNameMap {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     'hello-world': HelloWorld;
   }
 }
