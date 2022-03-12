@@ -6,8 +6,8 @@
     "plugin:jest/all",
     "plugin:lit-a11y/recommended",
     "plugin:lit/all",
-    "plugin:storybook/recommended",
     "plugin:storybook/csf",
+    "plugin:storybook/recommended",
     "plugin:wc/best-practice",
     "prettier"
   ],
