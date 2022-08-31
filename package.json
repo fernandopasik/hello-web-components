@@ -60,6 +60,7 @@
     "@types/jest": "^27.5.0",
     "@types/jest-axe": "^3.5.3",
     "@types/jest-environment-puppeteer": "^5.0.2",
+    "@types/react": "^18.0.25",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
     "@webcomponents/webcomponentsjs": "^2.6.0",
