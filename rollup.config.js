@@ -25,7 +25,7 @@ export default {
   plugins: isServe
     ? [resolve(), html(), serve()]
     : [
-        minifyHTML(),
+        minifyHTML.default(),
         terser({
           warnings: true,
           mangle: {
