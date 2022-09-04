@@ -6,9 +6,7 @@ const render = async (html: string): Promise<void> => {
 describe('hello world', () => {
   it('starts with hello', async () => {
     await render('<hello-world></hello-world>');
-    const element = await page.$('hello-world');
-
-    const text = await page.evaluate((el: Element | null) => el?.shadowRoot?.textContent, element);
+    const text = await page.$eval('hello-world', (node) => node.shadowRoot?.textContent);
 
     expect(text).toStrictEqual(expect.stringContaining('Hello world!'));
   });
