@@ -107,8 +107,7 @@
     "default-browser-id": "2.0.0",
     "glob-parent": "6.0.2",
     "rollup": "^3.4.0",
-    "trim": "1.0.1",
-    "webpack": "4.46.0"
+    "trim": "1.0.1"
   },
   "bundlewatch": {
     "files": [
