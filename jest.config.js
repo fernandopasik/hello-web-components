@@ -3,7 +3,7 @@
 export default {
   collectCoverageFrom: ['src/**/*.{j,t}s'],
   coveragePathIgnorePatterns: ['(e2e|stories)\\.[jt]sx?$', '/__stories__/', '/node_modules/'],
-  moduleNameMapper: { '(.*)\\.js': '$1' },
+  moduleNameMapper: { '^(\\.{1,2}/.*)\\.js$': '$1' },
   preset: 'ts-jest/presets/js-with-ts-esm',
   setupFilesAfterEnv: ['jest-axe/extend-expect'],
   testEnvironment: 'jsdom',
