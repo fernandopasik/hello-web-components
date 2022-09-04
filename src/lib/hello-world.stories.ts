@@ -5,7 +5,6 @@ import './hello-world';
 export default {
   title: 'Hello World',
   component: 'hello-world',
-  // eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
   render: ({ who }) => html`<hello-world who=${who}></hello-world>`,
 } as Meta;
 

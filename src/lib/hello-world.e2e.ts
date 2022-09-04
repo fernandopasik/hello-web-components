@@ -8,7 +8,6 @@ describe('hello world', () => {
     await render('<hello-world></hello-world>');
     const element = await page.$('hello-world');
 
-    // eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
     const text = await page.evaluate((el: Element | null) => el?.shadowRoot?.textContent, element);
 
     expect(text).toStrictEqual(expect.stringContaining('Hello world!'));
