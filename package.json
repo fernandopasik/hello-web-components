@@ -1,6 +1,6 @@
 {
   "name": "hello-web-components",
-  "version": "1.3.9",
+  "version": "1.4.0",
   "type": "module",
   "description": "A simple starter hello world web component written in typescript, using lit",
   "repository": "fernandopasik/hello-web-components",
