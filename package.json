@@ -108,10 +108,8 @@
     "web-component-analyzer": "^2.0.0-next.4"
   },
   "overrides": {
-    "default-browser-id": "2.0.0",
     "glob-parent": "6.0.2",
-    "rollup": "^3.19.1",
-    "trim": "1.0.1"
+    "rollup": "^3.19.1"
   },
   "bundlewatch": {
     "files": [
