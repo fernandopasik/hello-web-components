@@ -15,3 +15,6 @@ updates:
       storybook:
         patterns:
           - '@?storybook*'
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint*'
