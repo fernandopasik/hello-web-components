@@ -100,7 +100,7 @@
     "storybook": "^7.0.6",
     "ts-jest": "^29.1.0",
     "ts-lit-plugin": "^1.2.1",
-    "type-fest": "^3.8.0",
+    "type-fest": "^4.3.1",
     "typescript": "^5.0.4",
     "vite": "^4.2.2",
     "wait-on": "^7.0.1",
