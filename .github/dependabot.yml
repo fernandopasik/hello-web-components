@@ -14,7 +14,8 @@ updates:
           - '@commitlint*'
       storybook:
         patterns:
-          - '@?storybook*'
+          - '@storybook*'
+          - 'storybook*'
       typescript-eslint:
         patterns:
           - '@typescript-eslint*'
