@@ -44,7 +44,7 @@
     "verify": "npm run format:check && npm run lint && npm run lit-analyze && npm run check-types && npm run test:coverage && npm run build && npm run size"
   },
   "peerDependencies": {
-    "lit": "2.x.x"
+    "lit": "3.x.x"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.8.0",
@@ -84,7 +84,7 @@
     "jest-junit": "^16.0.0",
     "jest-puppeteer": "^9.0.1",
     "lint-staged": "^15.0.1",
-    "lit": "^2.8.0",
+    "lit": "^3.0.0",
     "lit-analyzer": "^1.2.1",
     "prettier": "^3.0.3",
     "prettier-plugin-organize-imports": "^3.2.3",
