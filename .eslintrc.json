@@ -33,6 +33,7 @@
   "rules": {
     "@typescript-eslint/no-magic-numbers": ["error", { "ignore": [0, 1] }],
     "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/unbound-method": "off",
     "import/extensions": ["error", "always"],
     "import/no-unresolved": "off",
