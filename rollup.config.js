@@ -27,7 +27,6 @@ export default {
     : [
         minifyHTML.default(),
         terser({
-          warnings: true,
           mangle: {
             module: true,
             properties: true,
