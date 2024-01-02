@@ -105,6 +105,7 @@
   },
   "overrides": {
     "@open-wc/building-utils": "2.21.0",
+    "axios": "^1.6.3",
     "glob-parent": "6.0.2",
     "rollup": "^4.9.1"
   },
