@@ -34,7 +34,7 @@
     "lint": "eslint . --ext js,ts",
     "lit-analyze": "lit-analyzer src --strict",
     "prebuild": "del lib hello-web-components.* index.html",
-    "prepare": "husky install",
+    "prepare": "husky",
     "preversion": "npm run verify",
     "size": "bundlewatch",
     "storybook": "storybook dev -p 6006",
