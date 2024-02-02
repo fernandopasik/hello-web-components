@@ -36,7 +36,7 @@
     "prebuild": "del lib hello-web-components.* index.html",
     "prepare": "husky",
     "preversion": "npm run verify",
-    "size": "bundlewatch",
+    "size": "size-limit",
     "storybook": "storybook dev -p 6006",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -52,6 +52,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@sand4rt/experimental-ct-web": "^1.41.0",
+    "@size-limit/file": "^11.0.2",
     "@storybook/addon-a11y": "^7.6.12",
     "@storybook/addon-essentials": "^7.6.12",
     "@storybook/web-components": "^7.6.12",
@@ -66,7 +67,6 @@
     "@typescript-eslint/parser": "^6.20.0",
     "@web/rollup-plugin-html": "^2.1.2",
     "@webcomponents/webcomponentsjs": "^2.8.0",
-    "bundlewatch": "^0.3.3",
     "del-cli": "^5.1.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -98,6 +98,7 @@
     "rollup": "^4.9.6",
     "rollup-plugin-minify-html-literals": "^1.2.6",
     "rollup-plugin-serve": "^3.0.0",
+    "size-limit": "^11.0.2",
     "storybook": "^7.6.12",
     "ts-jest": "^29.1.2",
     "ts-lit-plugin": "^2.0.2",
@@ -111,13 +112,5 @@
     "axios": "^1.6.3",
     "glob-parent": "6.0.2",
     "rollup": "^4.9.6"
-  },
-  "bundlewatch": {
-    "files": [
-      {
-        "maxSize": "1 kB",
-        "path": "hello-web-components.min.js"
-      }
-    ]
   }
 }
