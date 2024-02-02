@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/web-components';
 import { html } from 'lit';
-import './hello-world';
+import './hello-world.js';
 
 export default {
   title: 'Hello World',

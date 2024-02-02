@@ -3,6 +3,7 @@
     "airbnb-base",
     "plugin:@typescript-eslint/all",
     "plugin:import/typescript",
+    "plugin:require-extensions/recommended",
     "plugin:jest/all",
     "plugin:lit-a11y/recommended",
     "plugin:lit/all",
