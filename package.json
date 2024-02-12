@@ -85,7 +85,7 @@
     "jest-axe": "^8.0.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-junit": "^16.0.0",
-    "jest-puppeteer": "^9.0.2",
+    "jest-puppeteer": "^10.0.0",
     "lint-staged": "^15.2.1",
     "lit": "^3.1.2",
     "lit-analyzer": "^2.0.3",
