@@ -61,7 +61,7 @@
     "@types/jest": "^29.5.12",
     "@types/jest-axe": "^3.5.9",
     "@types/jest-environment-puppeteer": "^5.0.6",
-    "@types/mime": "^3.0.4",
+    "@types/mime": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
     "@web/rollup-plugin-html": "^2.3.0",
