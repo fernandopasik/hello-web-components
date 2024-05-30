@@ -3,7 +3,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { rollupPluginHTML as html } from '@web/rollup-plugin-html';
-import minifyHTML from 'rollup-plugin-minify-html-literals';
 import serve from 'rollup-plugin-serve';
 
 const isServe = Boolean(process.env.SERVE);
@@ -26,7 +25,6 @@ export default {
   plugins: isServe
     ? [resolve(), html(), serve()]
     : [
-        minifyHTML.default(),
         terser({
           mangle: {
             module: true,
