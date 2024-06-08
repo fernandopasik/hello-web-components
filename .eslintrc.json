@@ -4,7 +4,6 @@
     "plugin:@typescript-eslint/all",
     "plugin:import/typescript",
     "plugin:require-extensions/recommended",
-    "plugin:jest/all",
     "plugin:lit-a11y/recommended",
     "plugin:lit/all",
     "plugin:storybook/csf",
@@ -38,8 +37,6 @@
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/unbound-method": "off",
     "import/extensions": "off",
-    "jest/no-hooks": "off",
-    "jest/prefer-expect-assertions": "off",
     "max-lines": ["error", { "max": 130, "skipBlankLines": true, "skipComments": true }],
     "max-lines-per-function": [
       "error",

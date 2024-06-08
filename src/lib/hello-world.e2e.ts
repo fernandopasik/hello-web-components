@@ -1,4 +1,3 @@
-/* eslint-disable jest/require-hook */
 import { expect, test } from '@sand4rt/experimental-ct-web';
 import HelloWorld from './hello-world.js';
 
