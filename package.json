@@ -90,7 +90,7 @@
     "lit-analyzer": "^2.0.3",
     "playwright": "^1.45.0",
     "prettier": "^3.3.2",
-    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-organize-imports": "^4.0.0",
     "prettier-plugin-pkg": "^0.18.1",
     "prettier-plugin-sh": "^0.14.0",
     "puppeteer": "^22.12.1",
