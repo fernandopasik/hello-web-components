@@ -103,7 +103,7 @@
     "type-fest": "^4.20.1",
     "typescript": "^5.5.2",
     "vite": "^5.3.2",
-    "wait-on": "^7.2.0",
+    "wait-on": "^8.0.0",
     "web-component-analyzer": "^2.0.0"
   },
   "overrides": {
