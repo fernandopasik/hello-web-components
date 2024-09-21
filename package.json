@@ -41,6 +41,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install --with-deps",
     "verify": "npm run format:check && npm run lint && npm run lit-analyze && npm run check-types && npm run test:coverage && npm run build && npm run size"
   },
   "peerDependencies": {
@@ -50,6 +51,7 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@jest/globals": "^29.7.0",
+    "@playwright/test": "1.47.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@sand4rt/experimental-ct-web": "^1.47.0",
@@ -61,6 +63,7 @@
     "@types/jest": "^29.5.13",
     "@types/jest-axe": "^3.5.9",
     "@types/mime": "^4.0.0",
+    "@types/node": "^22.5.5",
     "@typescript-eslint/eslint-plugin": "^8.6.0",
     "@typescript-eslint/parser": "^8.6.0",
     "@web/rollup-plugin-html": "^2.3.0",
@@ -85,7 +88,6 @@
     "lint-staged": "^15.2.10",
     "lit": "^3.2.0",
     "lit-analyzer": "^2.0.3",
-    "playwright": "^1.47.2",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-pkg": "^0.18.1",

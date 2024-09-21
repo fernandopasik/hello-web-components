@@ -14,7 +14,7 @@
   "env": { "browser": true },
   "overrides": [
     {
-      "files": [".storybook/**", "*.e2e.*", "*.test.*", "*.stories.*"],
+      "files": [".storybook/**", "*.e2e.*", "*.test.*", "*.stories.*", "playwright.config.ts"],
       "rules": {
         "@typescript-eslint/no-magic-numbers": "off",
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
