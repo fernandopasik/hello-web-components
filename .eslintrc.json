@@ -25,7 +25,7 @@
     {
       "files": ["*.e2e.*"],
       "env": { "jest": true },
-      "globals": { "browser": true, "context": true, "jestPuppeteer": true, "page": true }
+      "globals": { "browser": true, "context": true, "page": true }
     },
     { "files": ["*.stories.*"], "rules": { "import/extensions": ["error", "never"] } }
   ],
