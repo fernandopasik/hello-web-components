@@ -37,11 +37,17 @@
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/unbound-method": "off",
     "import/extensions": "off",
+    "import/newline-after-import": "off",
+    "import/no-amd": "off",
+    "import/no-mutable-exports": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
     "max-lines": ["error", { "max": 130, "skipBlankLines": true, "skipComments": true }],
     "max-lines-per-function": [
       "error",
       { "max": 20, "skipBlankLines": true, "skipComments": true }
     ],
+    "storybook/no-uninstalled-addons": "off",
     "storybook/prefer-pascal-case": "off"
   }
 }
