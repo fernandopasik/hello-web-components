@@ -36,6 +36,8 @@ jobs:
         uses: fernandopasik/actions/setup-node@main
       - name: Lint
         run: npm run lint -- --format junit -o reports/lint-results.xml
+        env:
+          ESLINT_USE_FLAT_CONFIG: false
       - name: Upload Report
         uses: actions/upload-artifact@v4
         if: always()
