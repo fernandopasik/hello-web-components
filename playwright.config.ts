@@ -25,8 +25,8 @@ export default defineConfig({
   testMatch: 'src/**/*.e2e.ts',
   timeout: 10 * 1000,
   use: {
-    trace: 'on-first-retry',
     ctPort: 3100,
+    trace: 'on-first-retry',
   },
   workers: isCI ? 1 : undefined,
 });
