@@ -2,19 +2,19 @@
 import terser from '@rollup/plugin-terser';
 
 export default {
+  external: /lit/u,
   input: 'hello-web-components.js',
-  output: {
-    dir: '.',
-    entryFileNames: '[name].min.js',
-    format: 'esm',
-    sourcemap: true,
-  },
-  external: /lit/,
   onwarn(warning, warn) {
     if (warning.code === 'THIS_IS_UNDEFINED') {
       return;
     }
     warn(warning);
+  },
+  output: {
+    dir: '.',
+    entryFileNames: '[name].min.js',
+    format: 'esm',
+    sourcemap: true,
   },
   plugins: [
     terser({
