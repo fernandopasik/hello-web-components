@@ -68,6 +68,7 @@
     "@typescript-eslint/parser": "^8.7.0",
     "@web/rollup-plugin-html": "^2.3.0",
     "@webcomponents/webcomponentsjs": "^2.8.0",
+    "cross-env": "^7.0.3",
     "del-cli": "^5.1.0",
     "eslint": "^9.11.1",
     "eslint-config-airbnb-base": "^15.0.0",
