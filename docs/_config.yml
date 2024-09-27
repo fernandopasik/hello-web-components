@@ -15,7 +15,7 @@ google_analytics: G-2MWB7NGC05
 remote_theme: fernandopasik/jekyll-theme-material-docs
 
 plugins:
-  # already included in github, but to enable local dev
+  # Already included in github, but to enable local dev
   - jekyll-github-metadata
   - jekyll-remote-theme
   - jekyll-seo-tag
