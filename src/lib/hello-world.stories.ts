@@ -3,9 +3,9 @@ import { html } from 'lit';
 import './hello-world.js';
 
 export default {
-  title: 'Hello World',
   component: 'hello-world',
   render: ({ who }) => html`<hello-world who=${who}></hello-world>`,
+  title: 'Hello World',
 } as Meta;
 
 export const helloWorld = { args: { who: 'world' } };
