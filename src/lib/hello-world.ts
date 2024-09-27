@@ -1,5 +1,4 @@
-import type { TemplateResult } from 'lit';
-import { css, html, LitElement } from 'lit';
+import { css, html, LitElement, type TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 @customElement('hello-world')

@@ -1,7 +1,6 @@
 import { afterEach, describe, expect, it } from '@jest/globals';
 import { axe } from 'jest-axe';
-import type { LitElement } from 'lit';
-import { html, render } from 'lit';
+import { html, render, type LitElement } from 'lit';
 import './hello-world.js';
 
 const fixture = async (value: unknown): Promise<Element> => {
