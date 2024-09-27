@@ -32,7 +32,7 @@ yarn.lock
 /index.html
 _site
 .jekyll-cache
-/test-results/
-/playwright-report/
 /blob-report/
-/playwright/
+/playwright-report/
+/playwright/.cache/
+/test-results/
