@@ -87,7 +87,7 @@ jobs:
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Install e2e tests dependencies
-        run: test:e2e:install
+        run: npm run test:e2e:install
       - name: End-2-end Tests
         run: npm run test:e2e
   build:
