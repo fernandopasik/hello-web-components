@@ -27,7 +27,7 @@
     "analyze": "wca analyze src --format json --outFile custom-elements.json",
     "build": "tsc -p tsconfig.build.json && rollup -c",
     "check-types": "tsc --noEmit",
-    "clean": "del _site coverage lib hello-web-components.* index.html playwright playwright-report test-results",
+    "clean": "del _site coverage lib hello-web-components.* playwright/.cache playwright-report test-results",
     "docs": "jekyll serve -s docs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
