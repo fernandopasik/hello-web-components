@@ -35,13 +35,13 @@ jobs:
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Lint
-        run: npm run lint -- --format junit -o reports/lint-results.xml
+        run: npm run lint -- --format junit -o lint-results.xml
       - name: Upload Report
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: lint-results
-          path: reports/lint-results.xml
+          path: lint-results.xml
   check-types:
     name: Check Typescript Types
     runs-on: ubuntu-latest
@@ -63,7 +63,9 @@ jobs:
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Unit Tests
-        run: npm run test:coverage -- --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=reports/unit-test-results.xml
+        run: npm run test:coverage
+        env:
+          NODE_OPTIONS: --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=unit-test-results.xml
       - name: Upload Report to Codecov
         uses: codecov/codecov-action@v4
         if: always()
@@ -72,7 +74,7 @@ jobs:
         if: always()
         with:
           name: unit-test-results
-          path: reports/unit-test-results.xml
+          path: unit-test-results.xml
   e2e-test:
     name: End-2-end Tests
     runs-on: ubuntu-latest
