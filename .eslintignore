@@ -1,6 +1,0 @@
-node_modules
-/coverage
-!/.storybook
-/lib
-/hello-web-components.*
-_site

@@ -1,7 +1,4 @@
 {
-  "*": ["prettier --check"],
-  "*.{js,ts}": [
-    "cross-env ESLINT_USE_FLAT_CONFIG=false eslint",
-    "jest --bail --findRelatedTests --passWithNoTests"
-  ]
+  "*": ["prettier --check", "eslint"],
+  "*.{js,ts}": ["jest --bail --findRelatedTests --passWithNoTests"]
 }
