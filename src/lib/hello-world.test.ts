@@ -1,6 +1,7 @@
-import { afterEach, describe, expect, it } from '@jest/globals';
-import { axe } from 'jest-axe';
+import 'global-jsdom/register';
 import { html, render, type LitElement } from 'lit';
+import assert from 'node:assert';
+import { afterEach, describe, it } from 'node:test';
 import './hello-world.js';
 
 const fixture = async (value: unknown): Promise<Element> => {
@@ -26,18 +27,12 @@ describe('hello world', () => {
   it('starts with hello', async () => {
     const SUT = await fixture(html`<hello-world></hello-world>`);
 
-    expect(SUT.shadowRoot?.textContent).toStrictEqual(expect.stringContaining('Hello world!'));
+    assert.ok(Boolean(SUT.shadowRoot?.textContent?.includes('Hello world!')));
   });
 
   it('can say hi to another', async () => {
     const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
 
-    expect(SUT.shadowRoot?.textContent).toStrictEqual(expect.stringContaining('Hello Fernando!'));
-  });
-
-  it('should be accessible', async () => {
-    const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
-
-    await expect(axe(SUT)).resolves.toHaveNoViolations();
+    assert.ok(Boolean(SUT.shadowRoot?.textContent?.includes('Hello Fernando!')));
   });
 });

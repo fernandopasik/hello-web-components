@@ -35,4 +35,4 @@ jobs:
           artifact: unit-test-results
           name: Unit Tests Report
           path: '*.xml'
-          reporter: jest-junit
+          reporter: java-junit

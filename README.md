@@ -1,6 +1,6 @@
 # hello-web-components
 
-A simple starter **<hello-world \/>** web component written in typescript, using [lit](https://github.com/lit/lit). Unit tested with [jest](https://github.com/facebook/jest) and e2e tested with [playwright](https://playwright.dev/).
+A simple starter **<hello-world \/>** web component written in typescript, using [lit](https://github.com/lit/lit). Unit tested with [node test runner](https://nodejs.org/api/test.html) and e2e tested with [playwright](https://playwright.dev/).
 
 <!-- BADGES - START -->
 

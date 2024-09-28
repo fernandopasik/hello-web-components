@@ -52,7 +52,7 @@ export default ts.config(
     },
   },
   {
-    files: ['**/*.spec.*'],
+    files: ['**/*.test.*'],
     rules: {
       '@typescript-eslint/no-floating-promises': 'off',
       '@typescript-eslint/no-magic-numbers': 'off',
