@@ -50,7 +50,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "@playwright/test": "1.47.0",
+    "@playwright/test": "1.47.2",
     "@rollup/plugin-terser": "^0.4.4",
     "@sand4rt/experimental-ct-web": "^1.47.0",
     "@size-limit/file": "^11.1.6",
