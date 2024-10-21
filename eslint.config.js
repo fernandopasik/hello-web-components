@@ -1,6 +1,7 @@
 import eslint from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
+import storybook from 'eslint-plugin-storybook';
 import ymlPlugin from 'eslint-plugin-yml';
 import globals from 'globals';
 import ts from 'typescript-eslint';
@@ -21,6 +22,7 @@ export default ts.config(
   eslint.configs.all,
   importPlugin.flatConfigs.recommended,
   importPlugin.configs.typescript,
+  ...storybook.configs['flat/recommended'],
   ...ymlPlugin.configs['flat/recommended'],
   ...ymlPlugin.configs['flat/prettier'],
   {
@@ -59,6 +61,12 @@ export default ts.config(
       '@typescript-eslint/no-magic-numbers': 'off',
       'max-lines': 'off',
       'max-lines-per-function': 'off',
+    },
+  },
+  {
+    files: ['**/*.stories.*'],
+    rules: {
+      'storybook/prefer-pascal-case': 'off',
     },
   },
   prettier,
