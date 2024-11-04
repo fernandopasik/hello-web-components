@@ -72,7 +72,7 @@
     "eslint-plugin-lit-a11y": "^4.1.4",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-require-extensions": "^0.1.3",
-    "eslint-plugin-storybook": "^0.10.1",
+    "eslint-plugin-storybook": "^0.11.0",
     "eslint-plugin-wc": "^2.2.0",
     "eslint-plugin-yml": "^1.14.0",
     "global-jsdom": "^25.0.0",
