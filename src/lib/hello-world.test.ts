@@ -4,13 +4,13 @@ import assert from 'node:assert';
 import { afterEach, describe, it } from 'node:test';
 import './hello-world.js';
 
-const fixture = async (value: unknown): Promise<Element> => {
+const fixture = async (value: unknown): Promise<Element | null> => {
   const wrapper = document.createElement('div');
   wrapper.id = 'wrapper';
   render(value, wrapper);
   document.body.appendChild(wrapper);
-  const litElem = document.querySelector('#wrapper')?.firstElementChild as LitElement;
-  await litElem.updateComplete;
+  const litElem = document.querySelector<LitElement>('#wrapper :first-child');
+  await litElem?.updateComplete;
 
   return litElem;
 };
@@ -27,12 +27,12 @@ describe('hello world', () => {
   it('starts with hello', async () => {
     const SUT = await fixture(html`<hello-world></hello-world>`);
 
-    assert.ok(Boolean(SUT.shadowRoot?.textContent?.includes('Hello world!')));
+    assert.ok(Boolean(SUT?.shadowRoot?.textContent?.includes('Hello world!')));
   });
 
   it('can say hi to another', async () => {
     const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
 
-    assert.ok(Boolean(SUT.shadowRoot?.textContent?.includes('Hello Fernando!')));
+    assert.ok(Boolean(SUT?.shadowRoot?.textContent?.includes('Hello Fernando!')));
   });
 });
