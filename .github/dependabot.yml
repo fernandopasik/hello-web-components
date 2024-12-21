@@ -19,7 +19,3 @@ updates:
       typescript-eslint:
         patterns:
           - '@typescript-eslint*'
-      playwright:
-        patterns:
-          - '@playwright/test'
-          - '@sand4rt/experimental-ct-web'
