@@ -57,6 +57,7 @@
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/web-components": "^8.4.7",
     "@storybook/web-components-vite": "^8.4.7",
+    "@tsconfig/strictest": "^2.0.5",
     "@types/mime": "^4.0.0",
     "@types/node": "^22.10.5",
     "@webcomponents/webcomponentsjs": "^2.8.0",
