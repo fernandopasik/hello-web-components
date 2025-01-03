@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@sand4rt/experimental-ct-web';
 
-const isCI = Boolean(process.env.CI);
+const isCI = Boolean(process.env['CI']);
 
 export default defineConfig({
   forbidOnly: isCI,
@@ -28,5 +28,5 @@ export default defineConfig({
     ctPort: 3100,
     trace: 'on-first-retry',
   },
-  workers: isCI ? 1 : undefined,
+  workers: isCI ? 1 : '50%',
 });
