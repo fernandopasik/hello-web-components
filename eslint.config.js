@@ -20,11 +20,15 @@ export default ts.config(
     ],
   },
   eslint.configs.all,
+  ts.configs.strictTypeChecked,
+  ts.configs.stylisticTypeChecked,
   importPlugin.flatConfigs.recommended,
   importPlugin.configs.typescript,
   ...storybook.configs['flat/recommended'],
-  ...ymlPlugin.configs['flat/recommended'],
-  ...ymlPlugin.configs['flat/prettier'],
+  {
+    extends: [ymlPlugin.configs['flat/recommended'], ymlPlugin.configs['flat/prettier']],
+    files: ['*.yaml', '*.yml'],
+  },
   {
     files: ['**/*.js', '**/*.ts'],
     languageOptions: {
@@ -34,6 +38,7 @@ export default ts.config(
       sourceType: 'module',
     },
     rules: {
+      '@typescript-eslint/no-magic-numbers': ['error', { ignore: [0, 1, 2] }],
       'import/no-named-as-default': 'off',
       'import/no-named-as-default-member': 'off',
       'max-lines': ['error', { max: 130, skipBlankLines: true, skipComments: true }],
@@ -46,19 +51,9 @@ export default ts.config(
     settings: { 'import/resolver': { typescript: {} } },
   },
   {
-    extends: [...ts.configs.all],
-    files: ['**/*.ts'],
-    rules: {
-      // eslint-disable-next-line no-magic-numbers
-      '@typescript-eslint/no-magic-numbers': ['error', { ignore: [0, 1, 2] }],
-      '@typescript-eslint/prefer-readonly-parameter-types': 'off',
-    },
-  },
-  {
     files: ['**/*.test.*'],
     rules: {
       '@typescript-eslint/no-floating-promises': 'off',
-      '@typescript-eslint/no-magic-numbers': 'off',
       'max-lines': 'off',
       'max-lines-per-function': 'off',
     },
@@ -68,6 +63,18 @@ export default ts.config(
     rules: {
       'storybook/prefer-pascal-case': 'off',
     },
+  },
+  {
+    files: ['**/*.test.*', '*.config.@(js|ts)'],
+    rules: {
+      '@typescript-eslint/no-magic-numbers': 'off',
+      'no-magic-numbers': 'off',
+      'no-undefined': 'off',
+    },
+  },
+  {
+    extends: [ts.configs.disableTypeChecked],
+    files: ['*.config.js'],
   },
   prettier,
 );

@@ -23,12 +23,10 @@ export default defineConfig({
   retries: isCI ? 2 : 0,
   snapshotDir: './__snapshots__',
   testMatch: 'src/**/*.e2e.ts',
-  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
   timeout: 10 * 1000,
   use: {
     ctPort: 3100,
     trace: 'on-first-retry',
   },
-  // eslint-disable-next-line no-undefined
   workers: isCI ? 1 : undefined,
 });
