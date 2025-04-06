@@ -98,7 +98,6 @@
     "web-component-analyzer": "^2.0.0"
   },
   "overrides": {
-    "esbuild": "0.25.0",
     "glob-parent": "6.0.2"
   }
 }
