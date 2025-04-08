@@ -30,9 +30,11 @@ yarn.lock
 /playwright/.cache/
 /test-results/
 
+# jekyll
+_site
+.jekyll-cache
+
 # build and temp folders
 /lib
 /hello-web-components.*
 /index.html
-_site
-.jekyll-cache
