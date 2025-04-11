@@ -2,7 +2,7 @@ import 'global-jsdom/register';
 import { html, render, type LitElement } from 'lit';
 import assert from 'node:assert';
 import { afterEach, describe, it } from 'node:test';
-import './hello-world.js';
+import './hello-world.ts';
 
 const fixture = async (value: unknown): Promise<Element | null> => {
   const wrapper = document.createElement('div');
