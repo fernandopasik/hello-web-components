@@ -5,7 +5,7 @@
     "declarationMap": true,
     "experimentalDecorators": true,
     "inlineSources": true,
-    "lib": ["dom", "dom.iterable", "es2021"],
+    "lib": ["dom", "dom.iterable", "es2023"],
     "module": "ESNext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "rootDirs": ["src"],
     "sourceMap": true,
-    "target": "es2019"
+    "target": "es2022"
   },
   "exclude": ["*.config.js", "coverage", "hello-web-components.*", "lib"],
   "include": [".**/**/*", "**/*"]
