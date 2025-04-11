@@ -7,3 +7,7 @@
 _layouts/compress.html
 _site
 .jekyll-cache
+/blob-report/
+/playwright-report/
+/playwright/.cache/
+/test-results/
