@@ -40,7 +40,7 @@
     "storybook": "storybook dev -p 6006",
     "test": "node --test --import tsx src/**/*.test.*",
     "test:coverage": "NODE_V8_COVERAGE=./coverage c8 -r lcov node --test --experimental-test-coverage --import tsx src/**/*.test.*",
-    "test:e2e": "playwright test",
+    "test:e2e": "NODE_OPTIONS='--no-experimental-strip-types' playwright test",
     "test:e2e:install": "playwright install --with-deps",
     "verify": "npm run format:check && npm run lint && npm run lit-analyze && npm run check-types && npm run test:coverage && npm run build && npm run size"
   },
