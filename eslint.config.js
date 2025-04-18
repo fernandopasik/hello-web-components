@@ -50,23 +50,21 @@ export default ts.config(
     settings: { 'import/resolver': { typescript: {} } },
   },
   {
-    files: ['**/*.test.*'],
-    rules: {
-      '@typescript-eslint/no-floating-promises': 'off',
-      'max-lines': 'off',
-      'max-lines-per-function': 'off',
-    },
-  },
-  {
     files: ['**/*.stories.*'],
     rules: {
       'storybook/prefer-pascal-case': 'off',
     },
   },
   {
+    files: ['**/*.test.*'],
+    rules: { '@typescript-eslint/no-floating-promises': 'off' },
+  },
+  {
     files: ['**/*.test.*', '*.config.@(js|ts)'],
     rules: {
       '@typescript-eslint/no-magic-numbers': 'off',
+      'max-lines': 'off',
+      'max-lines-per-function': 'off',
       'no-magic-numbers': 'off',
       'no-undefined': 'off',
     },
