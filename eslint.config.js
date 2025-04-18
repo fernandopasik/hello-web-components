@@ -51,9 +51,7 @@ export default ts.config(
   },
   {
     files: ['**/*.stories.*'],
-    rules: {
-      'storybook/prefer-pascal-case': 'off',
-    },
+    rules: { 'storybook/prefer-pascal-case': 'off' },
   },
   {
     files: ['**/*.test.*'],
