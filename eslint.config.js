@@ -40,8 +40,6 @@ export default ts.config(
     },
     rules: {
       '@typescript-eslint/no-magic-numbers': ['error', { ignore: [0, 1, 2] }],
-      'import/no-named-as-default': 'off',
-      'import/no-named-as-default-member': 'off',
       'max-lines': ['error', { max: 130, skipBlankLines: true, skipComments: true }],
       'max-lines-per-function': ['error', { max: 30, skipBlankLines: true, skipComments: true }],
       'max-statements': ['error', { max: 35 }],
