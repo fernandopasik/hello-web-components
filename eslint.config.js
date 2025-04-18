@@ -4,7 +4,7 @@ import importPlugin from 'eslint-plugin-import';
 import storybook from 'eslint-plugin-storybook';
 import ymlPlugin from 'eslint-plugin-yml';
 import globals from 'globals';
-import ts from 'typescript-eslint';
+import ts, { configs as tsConfigs } from 'typescript-eslint';
 
 export default ts.config(
   {
@@ -21,8 +21,8 @@ export default ts.config(
     ],
   },
   eslint.configs.all,
-  ts.configs.strictTypeChecked,
-  ts.configs.stylisticTypeChecked,
+  tsConfigs.strictTypeChecked,
+  tsConfigs.stylisticTypeChecked,
   importPlugin.flatConfigs.recommended,
   importPlugin.configs.typescript,
   ...storybook.configs['flat/recommended'],
@@ -72,7 +72,7 @@ export default ts.config(
     },
   },
   {
-    extends: [ts.configs.disableTypeChecked],
+    extends: [tsConfigs.disableTypeChecked],
     files: ['*.config.js'],
   },
   prettier,
