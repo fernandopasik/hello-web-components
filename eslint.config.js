@@ -39,15 +39,22 @@ export default ts.config(
       sourceType: 'module',
     },
     rules: {
-      '@typescript-eslint/no-magic-numbers': ['error', { ignore: [0, 1, 2] }],
       'max-lines': ['error', { max: 130, skipBlankLines: true, skipComments: true }],
-      'max-lines-per-function': ['error', { max: 30, skipBlankLines: true, skipComments: true }],
+      'max-lines-per-function': ['error', { max: 24, skipBlankLines: true, skipComments: true }],
       'max-statements': ['error', { max: 35 }],
+      'no-magic-numbers': ['error', { ignore: [-1, 0, 1, 2] }],
       'no-ternary': 'off',
       'one-var': 'off',
       'sort-imports': 'off',
     },
     settings: { 'import/resolver': { typescript: {} } },
+  },
+  {
+    files: ['**/*.ts'],
+    rules: {
+      '@typescript-eslint/no-magic-numbers': ['error', { ignore: [-1, 0, 1, 2] }],
+      '@typescript-eslint/prefer-readonly-parameter-types': 'off',
+    },
   },
   {
     files: ['**/*.stories.*'],
