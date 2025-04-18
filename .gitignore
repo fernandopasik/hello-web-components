@@ -35,6 +35,6 @@ _site
 .jekyll-cache
 
 # build and temp folders
-/lib
 /hello-web-components.*
+/lib
 /index.html
