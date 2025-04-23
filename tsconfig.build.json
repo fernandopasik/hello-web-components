@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "noEmit": false, "outDir": ".", "rewriteRelativeImportExtensions": true },
-  "exclude": ["**/__stories__/**", "**/*.e2e.*", "**/*.test.*", "**/*.stories.*"],
+  "exclude": ["**/*.e2e.*", "**/*.stories.*", "**/*.test.*"],
   "include": ["src/**/*"]
 }
