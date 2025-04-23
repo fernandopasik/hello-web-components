@@ -27,7 +27,7 @@ export default ts.config(
   importPlugin.configs.typescript,
   ...storybook.configs['flat/recommended'],
   {
-    extends: [ymlPlugin.configs['flat/recommended'], ymlPlugin.configs['flat/prettier']],
+    extends: [ymlPlugin.configs['flat/standard'], ymlPlugin.configs['flat/prettier']],
     files: ['*.yaml', '*.yml'],
   },
   {
