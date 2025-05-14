@@ -79,7 +79,7 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "jsdom": "^26.1.0",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "^16.0.0",
     "lit": "^3.3.0",
     "lit-analyzer": "^2.0.3",
     "prettier": "^3.5.3",
