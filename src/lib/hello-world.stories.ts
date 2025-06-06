@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/web-components';
+import type { Meta } from '@storybook/web-components-vite';
 import { html } from 'lit';
 import './hello-world.ts';
 
