@@ -1,3 +1,4 @@
+import css from '@eslint/css';
 import eslint from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
@@ -29,6 +30,12 @@ export default ts.config(
   {
     extends: [ymlPlugin.configs['flat/standard'], ymlPlugin.configs['flat/prettier']],
     files: ['*.yaml', '*.yml'],
+  },
+  {
+    ...css.configs.recommended,
+    files: ['**/*.css'],
+    language: 'css/css',
+    plugins: { css },
   },
   {
     files: ['**/*.js', '**/*.ts'],
