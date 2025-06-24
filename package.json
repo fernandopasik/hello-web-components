@@ -94,7 +94,7 @@
     "type-fest": "^4.41.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.33.1",
-    "vite": "^6.3.5",
+    "vite": "^7.0.0",
     "web-component-analyzer": "^2.0.0"
   },
   "overrides": {
