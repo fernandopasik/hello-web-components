@@ -48,8 +48,8 @@
     "lit": "3.x.x"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@eslint/css": "^0.11.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@sand4rt/experimental-ct-web": "^1.52.1",
