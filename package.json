@@ -65,7 +65,7 @@
     "del-cli": "^7.0.0",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-formatter-junit": "^8.40.0",
+    "eslint-formatter-junit": "^9.0.1",
     "eslint-import-resolver-typescript": "^4.4.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-lit": "^2.1.1",
