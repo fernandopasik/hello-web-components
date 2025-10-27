@@ -37,7 +37,7 @@ jobs:
       - name: Lint
         run: npm run lint -- --format junit -o lint-results.xml
       - name: Upload Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: lint-results
@@ -70,7 +70,7 @@ jobs:
         uses: codecov/codecov-action@v5
         if: always()
       - name: Upload Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: unit-test-results
@@ -104,7 +104,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: bundle
           path: hello-web-components.min.*
