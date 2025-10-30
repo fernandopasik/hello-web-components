@@ -28,6 +28,7 @@
     "build": "tsc -p tsconfig.build.json && rollup -c",
     "check-types": "tsc --noEmit",
     "clean": "del _site coverage lib hello-web-components.* playwright/.cache playwright-report test-results",
+    "custom-elements": "web-component-analyzer --format json --outFile custom-elements.json src",
     "docs": "jekyll serve -s docs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
