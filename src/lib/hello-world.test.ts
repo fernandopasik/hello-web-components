@@ -27,12 +27,12 @@ describe('hello world', () => {
   it('starts with hello', async () => {
     const SUT = await fixture(html`<hello-world></hello-world>`);
 
-    assert.ok(Boolean(SUT?.shadowRoot?.textContent?.includes('Hello world!')));
+    assert.ok(Boolean(SUT?.shadowRoot?.textContent.includes('Hello world!')));
   });
 
   it('can say hi to another', async () => {
     const SUT = await fixture(html`<hello-world who="Fernando"></hello-world>`);
 
-    assert.ok(Boolean(SUT?.shadowRoot?.textContent?.includes('Hello Fernando!')));
+    assert.ok(Boolean(SUT?.shadowRoot?.textContent.includes('Hello Fernando!')));
   });
 });
