@@ -4,10 +4,11 @@ import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import storybook from 'eslint-plugin-storybook';
 import ymlPlugin from 'eslint-plugin-yml';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
-import ts, { configs as tsConfigs } from 'typescript-eslint';
+import { configs as tsConfigs } from 'typescript-eslint';
 
-export default ts.config(
+export default defineConfig([
   {
     ignores: [
       'coverage/',
@@ -86,4 +87,4 @@ export default ts.config(
     files: ['*.config.js'],
   },
   prettier,
-);
+]);
