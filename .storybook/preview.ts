@@ -1,4 +1,4 @@
-import { setCustomElements } from '@storybook/web-components';
+import { setCustomElementsManifest } from '@storybook/web-components-vite';
 import customElements from '../custom-elements.json';
 
-setCustomElements(customElements);
+setCustomElementsManifest(customElements);
