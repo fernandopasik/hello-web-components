@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
   check-format:
@@ -20,7 +20,7 @@ jobs:
     needs: install
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Check Format
@@ -31,7 +31,7 @@ jobs:
     needs: install
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Lint
@@ -48,7 +48,7 @@ jobs:
     needs: install
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Check Typescript Types
@@ -59,7 +59,7 @@ jobs:
     needs: install
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Unit Tests
@@ -81,7 +81,7 @@ jobs:
     needs: install
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Install e2e tests dependencies
@@ -98,7 +98,7 @@ jobs:
       - unit-test
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Build
@@ -114,7 +114,7 @@ jobs:
     needs: build
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
       - name: Download Build Artifact
