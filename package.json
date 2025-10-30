@@ -52,6 +52,7 @@
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@eslint/css": "^0.14.0",
+    "@eslint/js": "^9.38.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@sand4rt/experimental-ct-web": "^1.56.1",
     "@size-limit/file": "^11.2.0",
