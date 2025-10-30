@@ -2,7 +2,7 @@ import css from '@eslint/css';
 import eslint from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
-import storybook from 'eslint-plugin-storybook';
+import { configs as storybookConfigs } from 'eslint-plugin-storybook';
 import ymlPlugin from 'eslint-plugin-yml';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
@@ -27,7 +27,7 @@ export default defineConfig([
   tsConfigs.stylisticTypeChecked,
   importPlugin.flatConfigs.recommended,
   importPlugin.configs.typescript,
-  ...storybook.configs['flat/recommended'],
+  ...storybookConfigs['flat/recommended'],
   {
     extends: [ymlPlugin.configs['flat/standard'], ymlPlugin.configs['flat/prettier']],
     files: ['*.yaml', '*.yml'],

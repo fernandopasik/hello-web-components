@@ -1,6 +1,4 @@
-import type { StorybookConfig } from '@storybook/web-components-vite';
-
-const config: StorybookConfig = {
+export default {
   addons: ['@storybook/addon-a11y'],
   framework: {
     name: '@storybook/web-components-vite',
@@ -8,4 +6,3 @@ const config: StorybookConfig = {
   },
   stories: ['../src/**/*.stories.@(js|ts|mdx)'],
 };
-export default config;
