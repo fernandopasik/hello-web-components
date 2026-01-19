@@ -3,7 +3,7 @@ import eslint from '@eslint/js';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import { configs as storybookConfigs } from 'eslint-plugin-storybook';
-import ymlPlugin from 'eslint-plugin-yml';
+import { configs as ymlConfigs } from 'eslint-plugin-yml';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import { configs as tsConfigs } from 'typescript-eslint';
@@ -12,8 +12,8 @@ export default defineConfig([
   {
     ignores: [
       'coverage/',
-      'lib/',
       'hello-web-components.*',
+      'lib',
       '_site',
       '.jekyll-cache',
       '/blob-report/',
@@ -29,7 +29,7 @@ export default defineConfig([
   importPlugin.configs.typescript,
   ...storybookConfigs['flat/recommended'],
   {
-    extends: [ymlPlugin.configs['flat/standard'], ymlPlugin.configs['flat/prettier']],
+    extends: [ymlConfigs['flat/standard'], ymlConfigs['flat/prettier']],
     files: ['*.yaml', '*.yml'],
   },
   {
@@ -47,10 +47,12 @@ export default defineConfig([
       sourceType: 'module',
     },
     rules: {
+      'init-declarations': 'off',
       'max-lines': ['error', { max: 130, skipBlankLines: true, skipComments: true }],
       'max-lines-per-function': ['error', { max: 24, skipBlankLines: true, skipComments: true }],
       'max-statements': ['error', { max: 35 }],
       'no-magic-numbers': ['error', { ignore: [-1, 0, 1, 2] }],
+      'no-plusplus': 'off',
       'no-ternary': 'off',
       'one-var': 'off',
       'sort-imports': 'off',
