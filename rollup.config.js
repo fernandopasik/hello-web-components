@@ -1,3 +1,4 @@
+import minifyHTML from '@lit-labs/rollup-plugin-minify-html-literals';
 import terser from '@rollup/plugin-terser';
 
 export default {
@@ -16,6 +17,7 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    minifyHTML(),
     terser({
       mangle: {
         module: true,
