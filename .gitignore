@@ -34,6 +34,13 @@ yarn.lock
 _site
 .jekyll-cache
 
+# Storybook
+storybook-static
+debug-storybook.log
+
+# TypeScript cache
+*.tsbuildinfo
+
 # build and temp folders
 /hello-web-components.*
 /lib
