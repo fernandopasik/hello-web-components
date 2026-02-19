@@ -5,10 +5,7 @@ export default {
   external: /lit/u,
   input: 'hello-web-components.js',
   onwarn(warning, warn) {
-    if (warning.code === 'THIS_IS_UNDEFINED') {
-      return;
-    }
-    warn(warning);
+    if (warning.code !== 'THIS_IS_UNDEFINED') warn(warning);
   },
   output: {
     dir: '.',
