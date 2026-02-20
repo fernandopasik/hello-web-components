@@ -65,7 +65,7 @@
     "c8": "^10.1.3",
     "cross-env": "^10.1.0",
     "del-cli": "^7.0.0",
-    "eslint": "^9.39.3",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-formatter-junit": "^9.0.1",
     "eslint-import-resolver-typescript": "^4.4.4",
