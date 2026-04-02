@@ -8,7 +8,7 @@
     "inlineSources": true,
     "lib": ["dom", "dom.iterable", "es2023"],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "plugins": [{ "name": "ts-lit-plugin", "strict": true }],
     "resolveJsonModule": true,
