@@ -70,7 +70,7 @@ jobs:
         env:
           NODE_OPTIONS: --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=unit-test-results.xml
       - name: Upload Report to Codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v6
         if: always()
       - name: Upload Report
         uses: actions/upload-artifact@v7
