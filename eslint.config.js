@@ -1,7 +1,8 @@
 import css from '@eslint/css';
 import eslint from '@eslint/js';
 import prettier from 'eslint-config-prettier';
-import importPlugin from 'eslint-plugin-import';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import { createNodeResolver, flatConfigs as importConfigs } from 'eslint-plugin-import-x';
 import { configs as storybookConfigs } from 'eslint-plugin-storybook';
 import { configs as ymlConfigs } from 'eslint-plugin-yml';
 import { defineConfig } from 'eslint/config';
@@ -25,8 +26,8 @@ export default defineConfig([
   eslint.configs.all,
   tsConfigs.strictTypeChecked,
   tsConfigs.stylisticTypeChecked,
-  importPlugin.flatConfigs.recommended,
-  importPlugin.configs.typescript,
+  importConfigs.recommended,
+  importConfigs.typescript,
   ...storybookConfigs['flat/recommended'],
   {
     extends: [ymlConfigs['flat/standard'], ymlConfigs['flat/prettier']],
@@ -57,7 +58,9 @@ export default defineConfig([
       'one-var': 'off',
       'sort-imports': 'off',
     },
-    settings: { 'import/resolver': { typescript: {} } },
+    settings: {
+      'import-x/resolver-next': [createTypeScriptImportResolver(), createNodeResolver()],
+    },
   },
   {
     files: ['**/*.ts'],
