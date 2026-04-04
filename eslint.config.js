@@ -30,7 +30,7 @@ export default defineConfig([
   importConfigs.typescript,
   ...storybookConfigs['flat/recommended'],
   {
-    extends: [ymlConfigs['flat/standard'], ymlConfigs['flat/prettier']],
+    extends: [ymlConfigs.standard, ymlConfigs.prettier],
     files: ['*.yaml', '*.yml'],
   },
   {
