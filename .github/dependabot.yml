@@ -17,6 +17,10 @@ updates:
       commitlint:
         patterns:
           - '@commitlint*'
+      eslint:
+        patterns:
+          - '@eslint*'
+          - 'eslint'
       storybook:
         patterns:
           - '@storybook*'
