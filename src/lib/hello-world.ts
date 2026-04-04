@@ -1,7 +1,5 @@
 import { css, html, LitElement, type TemplateResult } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
 
-@customElement('hello-world')
 class HelloWorld extends LitElement {
   public static override styles = css`
     :host {
@@ -13,7 +11,10 @@ class HelloWorld extends LitElement {
     }
   `;
 
-  @property({ type: String })
+  public static override properties = {
+    who: { type: String },
+  };
+
   declare who: string;
 
   public constructor() {
@@ -25,6 +26,8 @@ class HelloWorld extends LitElement {
     return html`<span class="hello-world">Hello <span class="who">${this.who}</span>!</span>`;
   }
 }
+
+customElements.define('hello-world', HelloWorld);
 
 export default HelloWorld;
 
