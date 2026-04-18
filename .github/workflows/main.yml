@@ -47,6 +47,7 @@ jobs:
         with:
           name: lint-results
           path: lint-results.xml
+
   check-types:
     name: Check Typescript Types
     runs-on: ubuntu-latest
@@ -58,6 +59,7 @@ jobs:
         uses: fernandopasik/actions/setup-node@main
       - name: Check Typescript Types
         run: npm run check-types
+
   unit-test:
     name: Unit Tests
     runs-on: ubuntu-latest
@@ -80,6 +82,7 @@ jobs:
         with:
           name: unit-test-results
           path: unit-test-results.xml
+
   e2e-test:
     name: End-2-end Tests
     runs-on: ubuntu-latest
@@ -93,6 +96,7 @@ jobs:
         run: npm run test:e2e:install
       - name: End-2-end Tests
         run: npm run test:e2e
+
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -113,6 +117,7 @@ jobs:
         with:
           name: bundle
           path: hello-web-components.min.*
+
   size:
     name: Check Size
     runs-on: ubuntu-latest
