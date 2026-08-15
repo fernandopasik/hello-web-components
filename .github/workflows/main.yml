@@ -86,14 +86,14 @@ jobs:
   e2e-test:
     name: End-2-end Tests
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
     needs: install
     steps:
       - name: Checkout
         uses: actions/checkout@v6
       - name: Setup Node
         uses: fernandopasik/actions/setup-node@main
-      - name: Install e2e tests dependencies
-        run: npm run test:e2e:install
       - name: End-2-end Tests
         run: npm run test:e2e
 
