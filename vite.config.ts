@@ -6,7 +6,7 @@ export default defineConfig({
       entry: 'src/hello-web-components.ts',
       formats: ['es'],
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: /^lit/u,
     },
   },
