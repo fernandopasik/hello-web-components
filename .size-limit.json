@@ -1,7 +1,7 @@
 [
   {
     "gzip": true,
-    "limit": "600 B",
+    "limit": "310 B",
     "path": "hello-web-components.min.js"
   }
 ]
